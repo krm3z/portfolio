@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "langue": "en",
+    "titreSite": "Kerem Uysal · Data Analyst",
+    "descriptionSite": "Portfolio of Kerem Uysal, second-year AI & Data student at Ynov Lyon. Looking for a Data Analyst apprenticeship from September 2027."
+  },
+  "navigation": {
+    "allerAuContenu": "Skip to content",
+    "monogramme": "KU",
+    "accueil": "Home",
+    "apropos": "About",
+    "projets": "Work",
+    "contact": "Contact",
+    "ouvrirMenu": "Open menu",
+    "fermerMenu": "Close menu",
+    "changerLangue": "Français",
+    "changerLangueLabel": "View the site in French"
+  },
+  "chapitres": {
+    "loader": "Loading",
+    "entree": "Intro",
+    "accueil": "Home",
+    "apropos": "About",
+    "competences": "Skills",
+    "parcours": "Background",
+    "projets": "Work",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "son": {
+    "activer": "Turn sound on",
+    "couper": "Turn sound off"
+  },
+  "loader": {
+    "texteDefilant": "DATA ANALYST • AI & DATA •",
+    "chargement": "Loading",
+    "entrer": "Enter",
+    "entrerLabel": "Enter the site"
+  },
+  "entree": {
+    "passerIntro": "Skip intro",
+    "invitationScroll": "Scroll",
+    "microTexte": {
+      "ligne1": "© 2026 Kerem Uysal",
+      "ligne2": "Data Analyst · AI & Data student",
+      "ligne3": "Apprenticeship from Sept. 2027"
+    }
+  },
+  "accueil": {
+    "bonjour": "Hi, I'm",
+    "avant": "Data, tools and AI"
+  },
+  "apropos": {
+    "titre": "About me"
+  },
+  "competences": {
+    "titre": "What I do",
+    "voirLesPreuves": "See the projects that prove it",
+    "ouvrir": "Open",
+    "fermer": "Close",
+    "preuveMakingOf": "This site (making-of)",
+    "preuveParcours": "Background"
+  },
+  "parcours": {
+    "titre": "My background",
+    "types": {
+      "formation": "Education",
+      "experience": "Experience",
+      "objectif": "Goal"
+    }
+  },
+  "projets": {
+    "titre": "My work",
+    "outilsEtFonctions": "Tools and features",
+    "maPart": "My part",
+    "voirLeProjet": "View project",
+    "envieDeVoirPlus": "Want to see more?",
+    "phraseVoirPlus": "All my data, AI and web projects, with filters.",
+    "voirTous": "See all work",
+    "statuts": {
+      "termine": "Completed",
+      "en-cours": "In progress",
+      "en-ligne": "Live",
+      "prochainement": "Coming soon"
+    },
+    "categories": {
+      "data": "Data",
+      "ia": "AI",
+      "dev-web": "Web dev"
+    }
+  },
+  "pageProjets": {
+    "retourAccueil": "Back to home",
+    "titre": "All work",
+    "sousTitre": "Data, AI and web: my real part in each project.",
+    "filtres": {
+      "label": "Filter projects",
+      "tous": "All",
+      "reinitialiser": "Reset filters",
+      "aucunResultat": "No project matches these filters.",
+      "resultats": "{n} project(s)"
+    }
+  },
+  "pageProjet": {
+    "question": "The question",
+    "contexte": "Background",
+    "maPart": "My part",
+    "demarche": "Approach",
+    "resultats": "Results",
+    "outils": "Tools",
+    "retenu": "What I took away",
+    "retenuProvisoire": "What I've taken away so far",
+    "voirLeDepot": "View the GitHub repo",
+    "voirLeSite": "Visit the site",
+    "projetPrecedent": "Previous project",
+    "projetSuivant": "Next project",
+    "tousLesProjets": "All work"
+  },
+  "stack": {
+    "titre": "Tech stack",
+    "niveauLabel": "Level: {niveau}",
+    "utiliseDans": "Used in"
+  },
+  "contact": {
+    "titre": "Contact",
+    "meRecruter": "Hire me",
+    "email": "Email",
+    "localisation": "Location",
+    "reseaux": "Social",
+    "copierEmail": "Copy email",
+    "emailCopie": "Email copied",
+    "telechargerCv": "Download my CV",
+    "credit": "Designed and developed by Kerem Uysal ©"
+  },
+  "makingOf": {
+    "titre": "Making-of",
+    "sousTitre": "How I built this site by directing AI agents, phase by phase."
+  },
+  "secours": {
+    "sansWebgl": "Your browser can't display the 3D. All the content is still available below.",
+    "mouvementReduit": "Animations reduced to match your system settings."
+  },
+  "erreur404": {
+    "titre": "Page not found",
+    "texte": "This page doesn't exist or has moved.",
+    "retour": "Back to home"
+  },
+  "liensExternes": {
+    "nouvelOnglet": "(opens in a new tab)"
+  }
+}

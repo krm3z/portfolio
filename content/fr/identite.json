@@ -1,0 +1,37 @@
+{
+  "nom": "Kerem Uysal",
+  "titre": "Data Analyst · étudiant en B2 IA & Data",
+  "ecole": "Ynov Lyon Campus",
+  "localisation": "Région lyonnaise · mobile partout en France",
+  "recherche": {
+    "resume": "Alternance Data Analyst dès septembre 2027",
+    "poste": "Alternance Data Analyst pour la B3",
+    "debut": "Septembre 2027",
+    "rythme": "3 semaines en entreprise, 1 semaine à l'école"
+  },
+  "email": "keremuysal19@icloud.com",
+  "liens": {
+    "linkedin": "https://www.linkedin.com/in/kerem-uysal-0528823a9/",
+    "github": "https://github.com/krm3z"
+  },
+  "cv": {
+    "fichier": "/cv-kerem-uysal.pdf",
+    "disponible": false
+  },
+  "pitch": {
+    "texte": "Dans le bruit des données, je cherche ce qui éclaire une décision.",
+    "motAmbre": "éclaire"
+  },
+  "motsAlternes": [
+    { "texte": "DATA ANALYST", "ambre": true },
+    { "texte": "SQL", "ambre": false },
+    { "texte": "POWER BI", "ambre": false },
+    { "texte": "IA GÉNÉRATIVE", "ambre": false }
+  ],
+  "apropos": "Étudiant en B2 IA & Data à Ynov Lyon. À côté des cours, je travaille 25 h par semaine chez Carrefour, j'ai lancé ma marque de sacs LELON en septembre 2026, et je construis des sites et des IA en pilotant des agents. Ce qui m'intéresse dans la data, c'est trouver dans les chiffres ce qui aide à décider. Je cherche une alternance Data Analyst pour ma B3, dès septembre 2027.",
+  "chiffresCles": [
+    { "valeur": "11 246", "libelle": "publications NASA analysées" },
+    { "valeur": "8", "libelle": "projets data, web et IA" },
+    { "valeur": "25 h", "libelle": "par semaine chez Carrefour, en parallèle des cours" }
+  ]
+}

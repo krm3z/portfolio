@@ -1,0 +1,201 @@
+[
+  {
+    "slug": "nasa-data-pipeline",
+    "numero": "01",
+    "titre": "NASA Data Pipeline",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Can NASA's open data trace the story of modern space exploration?",
+    "description": "Thirty years of NASA's picture of the day (APOD), collected through the API, stored in SQLite, analysed in SQL and laid out in Power BI.",
+    "maPart": "Two-person project. I own the Data Analyst side: problem statement, KPIs, SQL analysis, Power BI dashboard, conclusions. My teammate owns the data engineering side.",
+    "resultats": [
+      "11,246 APOD posts analysed, from 16 June 1995 to 4 April 2026",
+      "Hubble is the only mission that appears every year",
+      "Pluto in 2015: 20 titles, 8 of them in July (the New Horizons flyby)",
+      "Spirit in 2004: 8 titles, 5 of them in January",
+      "By 2025, Webb shows up as often as Hubble"
+    ],
+    "outils": ["Python", "NASA API", "SQLite", "SQL", "Power BI"],
+    "statut": "termine",
+    "categories": ["data"],
+    "lien": { "url": "https://github.com/krm3z/nasa-data-pipeline" },
+    "visuel": { "source": "docs/missions.png (nasa-data-pipeline repo, the dashboard)", "phase": "09" },
+    "recit": {
+      "contexte": "It all started with Interstellar, which I've watched dozens of times. I pitched the topic to Edvige, and found out that NASA has published one picture a day since 1995.",
+      "retenu": "I used to think data analysis meant running queries on a database where everything is already sorted. In practice, SQL showed me the peaks, but the investigation explained them: searching the web for what happened, month by month. That was my favourite part. It was also my first Power BI project. If you know Excel, you find your way around fast, and watching 30 years of data take shape in a chart was beautiful to me."
+    }
+  },
+  {
+    "slug": "pollution-meteo",
+    "numero": "02",
+    "titre": "Pollution & Weather Data Pipeline",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "How do you link air pollution and weather to measure environmental impact?",
+    "description": "A pipeline that pairs each pollution station with the nearest weather station, merges readings hour by hour and computes an impact index.",
+    "maPart": "48-hour team data challenge. This repo is my own complete version.",
+    "resultats": [
+      "Each pollution station paired with the nearest weather station (geospatial join)",
+      "Hourly merge of the readings",
+      "Impact index from 0 to 100: NO2 30%, O3 20%, PM10 25%, PM2.5 25%, adjusted for wind",
+      "4 levels: low, moderate, high, critical",
+      "FastAPI service with 5 routes"
+    ],
+    "outils": ["Python", "pandas", "FastAPI"],
+    "statut": "termine",
+    "categories": ["data"],
+    "lien": { "url": "https://github.com/krm3z/pollution-meteo-data-pipeline" },
+    "visuel": { "source": "To build from output/final_dataset.csv (pollution-meteo-data-pipeline repo)", "phase": "09" },
+    "recit": {
+      "contexte": "During Ynov's 48-hour data challenge, the AI and data team members didn't show up. I was in my first year, and I took that part on. The project lead chose to redo the analysis on his own, and he reached the same results. So I decided to finish the job in my own repo, covering the full brief and going further: geospatial join, impact index and API.",
+      "retenu": "When you're the youngest on the team, being right isn't enough: you also have to show it. This project taught me to see my work through and to back it up with evidence."
+    }
+  },
+  {
+    "slug": "hirastream",
+    "numero": "03",
+    "titre": "HiraStream",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "How do you recognise and classify a piece of music from its sound?",
+    "description": "A self-hosted family music platform on a Raspberry Pi, zero budget, fully open source.",
+    "maPart": "400-hour YDays project, team of 6 (2 master's developers, 4 data profiles). I'm building the AI part: a Machine Learning model that recognises and classifies tracks from their sound. I also designed the app mock-ups.",
+    "resultats": [],
+    "outils": ["Python", "librosa", "scikit-learn", "FastAPI", "Docker"],
+    "statut": "en-cours",
+    "categories": ["ia", "data"],
+    "lien": {
+      "url": "https://github.com/Riantsoa11/hiraStream",
+      "note": "The repo has to go public. If it is still private in phase 09, no link."
+    },
+    "visuel": { "source": "Architecture diagram to create, my part in amber", "phase": "09" },
+    "recit": {
+      "contexte": "HiraStream is a YDays project: teams mix programmes and levels, from first year to master's.",
+      "retenu": "Last year, on Héritage, I was in a support role. This year, I took the lead: I made the mock-ups and pushed the team to agree on colours, shapes and coding conventions before writing the first line. Alongside that, I'm building the AI part. I have far more impact on the project.",
+      "retenuProvisoire": true
+    }
+  },
+  {
+    "slug": "lelon",
+    "numero": "04",
+    "titre": "LELON",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Can you launch a brand and its online store by directing AI agents?",
+    "description": "My handbag brand, launched in September 2026, with its online store.",
+    "maPart": "Founder. Claude Code wrote the site's code under my direction: the skill on show here is not the code.",
+    "resultats": ["Handbag brand launched in September 2026, with an online store"],
+    "outils": ["Shopify", "AI agents"],
+    "statut": "en-ligne",
+    "categories": ["ia", "dev-web"],
+    "lien": { "url": "https://lelon.fr" },
+    "visuel": { "source": "Screenshot of the lelon.fr home page", "phase": "09" },
+    "recit": {
+      "contexte": "It all started with one wish: to have my own brand.",
+      "maPart": "I set up my company and filed my first URSSAF declarations. I configured Shopify setting by setting, payments included. Claude Code wrote the site's code, under my direction.",
+      "retenu": "This project doesn't show code. It shows everything around it: setting up a company, handling the paperwork, building a store and directing an AI. My skills don't stop when class ends."
+    }
+  },
+  {
+    "slug": "world-cup-winner",
+    "numero": "05",
+    "titre": "World Cup Winner",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "Which team will win the 2030 World Cup?",
+    "description": "Predicting the winner of the 2030 World Cup.",
+    "maPart": "Team of 3. I handle the data analysis.",
+    "resultats": [],
+    "outils": ["Python", "Machine Learning"],
+    "statut": "en-cours",
+    "categories": ["data", "ia"],
+    "lien": { "url": "https://github.com/HOUDAED/World_Cup_Winner" },
+    "visuel": { "source": "To be decided", "phase": "09" },
+    "recit": {
+      "contexte": "A year-long independent project, in a team of three, mixing data and AI. I love football, so the topic speaks to me.",
+      "demarche": "Predict the 2030 World Cup winner by running many simulations, then see which team comes out on top most often.",
+      "retenu": "Football never follows the predictions. That's what makes the project interesting: in 2030, we'll be able to compare our simulations with the real result.",
+      "retenuProvisoire": true
+    }
+  },
+  {
+    "slug": "heritage",
+    "numero": "06",
+    "titre": "Héritage (YDays)",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "A social app for sharing family stories.",
+    "maPart": "Supporting the master's data and web dev students: front-end work, the PWA (installable app) which I coded, ideas for the database, the menu and the home page.",
+    "resultats": [],
+    "outils": ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "statut": "termine",
+    "categories": ["data", "dev-web"],
+    "lien": { "url": "https://github.com/STimour/Heritage_ydays" },
+    "visuel": { "source": "To be decided", "phase": "09" },
+    "recit": {
+      "contexte": "My first real professional project, in first year, supporting master's students in data and web development.",
+      "maPart": "I worked on the front end and coded the PWA myself, which makes the app installable. I also suggested ideas for the database, the menu and the home page.",
+      "retenu": "I thought a project meant showing up and coding. I found out that before the first line, you think through every detail: the colour, the commercial angle, the image, the communication. I also understood how a site comes together, between the front end, the back end and the database. This project gave me the habits I'm using this year on HiraStream."
+    }
+  },
+  {
+    "slug": "groupie-tracker",
+    "numero": "07",
+    "titre": "Groupie Tracker “REK”",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "A multiplayer browser game: music blind test and a word game (petit bac).",
+    "maPart": "Team of 3. I built the game rooms, the blind test with the Spotify API, and the README.",
+    "resultats": [],
+    "outils": ["Go", "Spotify API", "SQLite"],
+    "statut": "termine",
+    "categories": ["dev-web"],
+    "lien": { "url": "https://github.com/Lyon-Ynov-Campus/groupie-tracker-rek" },
+    "visuel": { "source": "To be decided", "phase": "09" },
+    "recit": {
+      "contexte": "A first-year group project with three of us: build a blind test and petit bac website.",
+      "maPart": "I integrated the Spotify API and coded the blind test front end, along with the game rooms.",
+      "retenu": "It was the first time I fetched and integrated an API. One of the two planned APIs didn't work: I had to adapt and switch to Spotify."
+    }
+  },
+  {
+    "slug": "power4",
+    "numero": "08",
+    "titre": "Power4",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "Connect Four, playable by two people or against a bot.",
+    "maPart": "Solo, first-year project.",
+    "resultats": [],
+    "outils": ["Go", "HTML", "CSS"],
+    "statut": "termine",
+    "categories": ["dev-web"],
+    "lien": { "url": "https://github.com/krm3z/Power4" },
+    "visuel": { "source": "To be decided", "phase": "09" },
+    "recit": {
+      "contexte": "My first project of first year, at the start of the year. Until then, our games ran in the terminal.",
+      "maPart": "On my own, I coded the game in Go, with its web interface and a bot with several difficulty levels.",
+      "retenu": "It was the first time my code turned into a real website. Everyone knows Connect Four: I took care over the colours and followed the full brief. It's not my most important project, but it's the one where I saw my code take shape."
+    }
+  },
+  {
+    "slug": "energie",
+    "numero": "09",
+    "titre": "Energy",
+    "vedette": false,
+    "aUnePage": false,
+    "question": "",
+    "description": "A data project on the energy sector.",
+    "maPart": "",
+    "resultats": [],
+    "outils": [],
+    "statut": "prochainement",
+    "categories": ["data"],
+    "lien": { "url": null },
+    "visuel": { "source": "None (“Coming soon” card)", "phase": "—" },
+    "recit": {}
+  }
+]

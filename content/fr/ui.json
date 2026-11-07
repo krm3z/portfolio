@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "langue": "fr",
+    "titreSite": "Kerem Uysal · Data Analyst",
+    "descriptionSite": "Portfolio de Kerem Uysal, étudiant en B2 IA & Data à Ynov Lyon. Recherche une alternance Data Analyst dès septembre 2027."
+  },
+  "navigation": {
+    "allerAuContenu": "Aller au contenu",
+    "monogramme": "KU",
+    "accueil": "Accueil",
+    "apropos": "À propos",
+    "projets": "Projets",
+    "contact": "Contact",
+    "ouvrirMenu": "Ouvrir le menu",
+    "fermerMenu": "Fermer le menu",
+    "changerLangue": "English",
+    "changerLangueLabel": "Voir le site en anglais"
+  },
+  "chapitres": {
+    "loader": "Chargement",
+    "entree": "Entrée",
+    "accueil": "Accueil",
+    "apropos": "À propos",
+    "competences": "Compétences",
+    "parcours": "Parcours",
+    "projets": "Projets",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "son": {
+    "activer": "Activer le son",
+    "couper": "Couper le son"
+  },
+  "loader": {
+    "texteDefilant": "DATA ANALYST • IA & DATA •",
+    "chargement": "Chargement",
+    "entrer": "Entrer",
+    "entrerLabel": "Entrer sur le site"
+  },
+  "entree": {
+    "passerIntro": "Passer l'intro",
+    "invitationScroll": "Faites défiler",
+    "microTexte": {
+      "ligne1": "© 2026 Kerem Uysal",
+      "ligne2": "Data Analyst · B2 IA & Data",
+      "ligne3": "Alternance dès sept. 2027"
+    }
+  },
+  "accueil": {
+    "bonjour": "Bonjour, je suis",
+    "avant": "Data, outils et IA"
+  },
+  "apropos": {
+    "titre": "À propos"
+  },
+  "competences": {
+    "titre": "Ce que je sais faire",
+    "voirLesPreuves": "Voir les projets qui le prouvent",
+    "ouvrir": "Ouvrir",
+    "fermer": "Fermer",
+    "preuveMakingOf": "Ce site (making-of)",
+    "preuveParcours": "Parcours"
+  },
+  "parcours": {
+    "titre": "Mon parcours",
+    "types": {
+      "formation": "Formation",
+      "experience": "Expérience",
+      "objectif": "Objectif"
+    }
+  },
+  "projets": {
+    "titre": "Mes projets",
+    "outilsEtFonctions": "Outils et fonctionnalités",
+    "maPart": "Ma part",
+    "voirLeProjet": "Voir le projet",
+    "envieDeVoirPlus": "Envie d'en voir plus ?",
+    "phraseVoirPlus": "Tous mes projets data, IA et web, avec des filtres.",
+    "voirTous": "Voir tous les projets",
+    "statuts": {
+      "termine": "Terminé",
+      "en-cours": "En cours",
+      "en-ligne": "En ligne",
+      "prochainement": "Prochainement"
+    },
+    "categories": {
+      "data": "Data",
+      "ia": "IA",
+      "dev-web": "Dev web"
+    }
+  },
+  "pageProjets": {
+    "retourAccueil": "Retour à l'accueil",
+    "titre": "Tous les projets",
+    "sousTitre": "Data, IA et web : ma part réelle dans chaque projet.",
+    "filtres": {
+      "label": "Filtrer les projets",
+      "tous": "Tous",
+      "reinitialiser": "Réinitialiser les filtres",
+      "aucunResultat": "Aucun projet ne correspond à ces filtres.",
+      "resultats": "{n} projet(s)"
+    }
+  },
+  "pageProjet": {
+    "question": "La question",
+    "contexte": "Contexte",
+    "maPart": "Ma part",
+    "demarche": "Démarche",
+    "resultats": "Résultats",
+    "outils": "Outils",
+    "retenu": "Ce que j'en retiens",
+    "retenuProvisoire": "Ce que j'en retiens, pour l'instant",
+    "voirLeDepot": "Voir le dépôt GitHub",
+    "voirLeSite": "Voir le site",
+    "projetPrecedent": "Projet précédent",
+    "projetSuivant": "Projet suivant",
+    "tousLesProjets": "Tous les projets"
+  },
+  "stack": {
+    "titre": "Ma stack",
+    "niveauLabel": "Niveau : {niveau}",
+    "utiliseDans": "Utilisé dans"
+  },
+  "contact": {
+    "titre": "Contact",
+    "meRecruter": "Me recruter",
+    "email": "Email",
+    "localisation": "Localisation",
+    "reseaux": "Réseaux",
+    "copierEmail": "Copier l'email",
+    "emailCopie": "Email copié",
+    "telechargerCv": "Télécharger mon CV",
+    "credit": "Conçu et développé par Kerem Uysal ©"
+  },
+  "makingOf": {
+    "titre": "Making-of",
+    "sousTitre": "Comment j'ai construit ce site en pilotant des agents IA, phase par phase."
+  },
+  "secours": {
+    "sansWebgl": "Votre navigateur n'affiche pas la 3D. Tout le contenu reste disponible ci-dessous.",
+    "mouvementReduit": "Animations réduites selon vos préférences système."
+  },
+  "erreur404": {
+    "titre": "Page introuvable",
+    "texte": "Cette page n'existe pas ou a changé d'adresse.",
+    "retour": "Retour à l'accueil"
+  },
+  "liensExternes": {
+    "nouvelOnglet": "(s'ouvre dans un nouvel onglet)"
+  }
+}

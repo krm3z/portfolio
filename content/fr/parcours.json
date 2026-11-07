@@ -1,0 +1,57 @@
+[
+  {
+    "id": "bac-sti2d",
+    "periode": "2025",
+    "debut": "2025-06",
+    "titre": "Bac STI2D, spécialité SIN",
+    "detail": "Mention Assez Bien",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "b1-ynov",
+    "periode": "2025 – 2026",
+    "debut": "2025-09",
+    "titre": "B1 Informatique",
+    "organisation": "Ynov Lyon Campus",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "carrefour",
+    "periode": "Depuis sept. 2026",
+    "debut": "2026-09",
+    "titre": "Caissier",
+    "organisation": "Carrefour",
+    "detail": "25 h par semaine en parallèle des études",
+    "type": "experience",
+    "ambre": false
+  },
+  {
+    "id": "lelon-fondateur",
+    "periode": "Depuis sept. 2026",
+    "debut": "2026-09",
+    "titre": "Fondateur",
+    "organisation": "LELON",
+    "detail": "Marque de sacs à main",
+    "type": "experience",
+    "ambre": false
+  },
+  {
+    "id": "b2-ynov",
+    "periode": "2026 – 2027",
+    "debut": "2026-09",
+    "titre": "B2 IA & Data",
+    "organisation": "Ynov Lyon Campus",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "objectif-alternance",
+    "periode": "Sept. 2027",
+    "debut": "2027-09",
+    "titre": "Objectif : alternance Data Analyst (B3)",
+    "type": "objectif",
+    "ambre": true
+  }
+]

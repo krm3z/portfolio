@@ -1,0 +1,146 @@
+{
+  "niveaux": [
+    { "id": "maitrise", "libelle": "Maîtrisé", "segments": 3 },
+    { "id": "progression", "libelle": "En progression", "segments": 2 },
+    { "id": "bases", "libelle": "Bases", "segments": 1 }
+  ],
+  "outils": [
+    {
+      "id": "sql",
+      "nom": "SQL",
+      "detail": "PostgreSQL, SQLite, MySQL",
+      "niveau": "maitrise",
+      "preuves": [
+        { "type": "projet", "slug": "nasa-data-pipeline" },
+        { "type": "projet", "slug": "heritage" },
+        { "type": "projet", "slug": "groupie-tracker" }
+      ]
+    },
+    { "id": "excel", "nom": "Excel", "niveau": "maitrise", "preuves": [] },
+    {
+      "id": "git",
+      "nom": "Git et GitHub",
+      "niveau": "maitrise",
+      "preuves": [
+        { "type": "projet", "slug": "heritage" },
+        { "type": "projet", "slug": "groupie-tracker" },
+        { "type": "projet", "slug": "hirastream" },
+        { "type": "projet", "slug": "nasa-data-pipeline" }
+      ]
+    },
+    {
+      "id": "linux",
+      "nom": "Linux",
+      "detail": "Debian, ligne de commande",
+      "niveau": "maitrise",
+      "preuves": [{ "type": "projet", "slug": "hirastream" }]
+    },
+    {
+      "id": "agents-ia",
+      "nom": "Pilotage d'agents IA",
+      "niveau": "maitrise",
+      "preuves": [
+        { "type": "projet", "slug": "lelon" },
+        { "type": "page", "href": "/making-of" }
+      ]
+    },
+    {
+      "id": "power-bi",
+      "nom": "Power BI",
+      "detail": "appris sur le projet NASA",
+      "niveau": "progression",
+      "preuves": [{ "type": "projet", "slug": "nasa-data-pipeline" }]
+    },
+    {
+      "id": "python",
+      "nom": "Python",
+      "niveau": "progression",
+      "preuves": [
+        { "type": "projet", "slug": "nasa-data-pipeline" },
+        { "type": "projet", "slug": "pollution-meteo" },
+        { "type": "projet", "slug": "hirastream" },
+        { "type": "projet", "slug": "world-cup-winner" }
+      ]
+    },
+    {
+      "id": "pandas",
+      "nom": "pandas",
+      "niveau": "progression",
+      "preuves": [{ "type": "projet", "slug": "pollution-meteo" }]
+    },
+    {
+      "id": "api-rest",
+      "nom": "APIs REST et JSON",
+      "niveau": "progression",
+      "preuves": [
+        { "type": "projet", "slug": "nasa-data-pipeline" },
+        { "type": "projet", "slug": "groupie-tracker" },
+        { "type": "projet", "slug": "pollution-meteo" }
+      ]
+    },
+    {
+      "id": "etl",
+      "nom": "Pipelines ETL",
+      "niveau": "progression",
+      "preuves": [
+        { "type": "projet", "slug": "nasa-data-pipeline" },
+        { "type": "projet", "slug": "pollution-meteo" }
+      ]
+    },
+    {
+      "id": "ml-audio",
+      "nom": "Machine Learning audio",
+      "detail": "librosa, scikit-learn",
+      "niveau": "progression",
+      "preuves": [{ "type": "projet", "slug": "hirastream" }]
+    },
+    {
+      "id": "html-css",
+      "nom": "HTML/CSS",
+      "niveau": "bases",
+      "preuves": [
+        { "type": "projet", "slug": "power4" },
+        { "type": "projet", "slug": "groupie-tracker" }
+      ]
+    },
+    {
+      "id": "js-ts",
+      "nom": "JavaScript/TypeScript",
+      "niveau": "bases",
+      "preuves": [{ "type": "projet", "slug": "heritage" }]
+    },
+    {
+      "id": "react-next",
+      "nom": "React/Next.js",
+      "niveau": "bases",
+      "preuves": [{ "type": "projet", "slug": "heritage" }]
+    },
+    {
+      "id": "go",
+      "nom": "Go",
+      "niveau": "bases",
+      "preuves": [
+        { "type": "projet", "slug": "power4" },
+        { "type": "projet", "slug": "groupie-tracker" }
+      ]
+    },
+    {
+      "id": "fastapi",
+      "nom": "FastAPI",
+      "niveau": "bases",
+      "preuves": [
+        { "type": "projet", "slug": "pollution-meteo" },
+        { "type": "projet", "slug": "hirastream" }
+      ]
+    },
+    {
+      "id": "docker",
+      "nom": "Docker",
+      "niveau": "bases",
+      "preuves": [
+        { "type": "projet", "slug": "heritage" },
+        { "type": "projet", "slug": "hirastream" }
+      ]
+    }
+  ]
+}

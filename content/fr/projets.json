@@ -1,0 +1,201 @@
+[
+  {
+    "slug": "nasa-data-pipeline",
+    "numero": "01",
+    "titre": "NASA Data Pipeline",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Les données ouvertes de la NASA permettent-elles de retracer l'exploration spatiale moderne ?",
+    "description": "Trente ans d'images du jour de la NASA (APOD), collectées par API, rangées en SQLite, analysées en SQL et mises en forme dans Power BI.",
+    "maPart": "Projet en binôme. Je tiens la partie Data Analyst : problématique, KPI, analyses SQL, dashboard Power BI, conclusions. Mon binôme tient la partie data engineering.",
+    "resultats": [
+      "11 246 publications APOD analysées, du 16/06/1995 au 04/04/2026",
+      "Hubble est la seule mission présente chaque année",
+      "Pluton 2015 : 20 titres, dont 8 en juillet (survol de New Horizons)",
+      "Spirit 2004 : 8 titres, dont 5 en janvier",
+      "Webb devient en 2025 aussi présent que Hubble"
+    ],
+    "outils": ["Python", "API NASA", "SQLite", "SQL", "Power BI"],
+    "statut": "termine",
+    "categories": ["data"],
+    "lien": { "url": "https://github.com/krm3z/nasa-data-pipeline" },
+    "visuel": { "source": "docs/missions.png (dépôt nasa-data-pipeline, le dashboard)", "phase": "09" },
+    "recit": {
+      "contexte": "Tout est parti d'Interstellar, que j'ai revu des dizaines de fois. J'ai proposé le sujet à Edvige, et j'ai découvert que la NASA publie une image par jour depuis 1995.",
+      "retenu": "Je pensais que l'analyse de données, c'était lancer des requêtes sur une base où tout est déjà rangé. En réalité, le SQL m'a montré les pics, mais c'est l'enquête qui les a expliqués : chercher sur le web ce qui s'était passé, mois par mois. C'est la partie qui m'a le plus plu. C'était aussi mon premier projet sous Power BI. On prend vite ses repères quand on connaît Excel, et voir 30 ans de données prendre forme dans un graphique, j'ai trouvé ça vraiment beau."
+    }
+  },
+  {
+    "slug": "pollution-meteo",
+    "numero": "02",
+    "titre": "Pollution & Météo Data Pipeline",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Comment relier pollution de l'air et météo pour mesurer un impact environnemental ?",
+    "description": "Un pipeline qui associe chaque station de pollution à la station météo la plus proche, fusionne les mesures heure par heure et calcule un indice d'impact.",
+    "maPart": "Challenge data de 48 h en groupe. Ce dépôt est ma version personnelle complète.",
+    "resultats": [
+      "Chaque station de pollution associée à la station météo la plus proche (jointure géospatiale)",
+      "Fusion horaire des mesures",
+      "Indice d'impact de 0 à 100 : NO2 30 %, O3 20 %, PM10 25 %, PM2,5 25 %, ajusté par le vent",
+      "4 niveaux : faible, modéré, élevé, critique",
+      "API FastAPI de 5 routes"
+    ],
+    "outils": ["Python", "pandas", "FastAPI"],
+    "statut": "termine",
+    "categories": ["data"],
+    "lien": { "url": "https://github.com/krm3z/pollution-meteo-data-pipeline" },
+    "visuel": { "source": "À créer à partir de output/final_dataset.csv (dépôt pollution-meteo-data-pipeline)", "phase": "09" },
+    "recit": {
+      "contexte": "Pendant le challenge data de 48 h d'Ynov, les membres de la partie IA et data étaient absents. En B1, j'ai pris cette partie en charge. Le chef de projet a préféré refaire l'analyse de son côté, et il est arrivé aux mêmes résultats. J'ai donc décidé d'aller au bout dans mon propre dépôt, en respectant toute la consigne et en allant plus loin : jointure géospatiale, indice d'impact et API.",
+      "retenu": "Quand on est le plus jeune de l'équipe, avoir raison ne suffit pas, il faut aussi savoir le montrer. Ce projet m'a appris à aller au bout de mon travail et à le défendre avec des preuves."
+    }
+  },
+  {
+    "slug": "hirastream",
+    "numero": "03",
+    "titre": "HiraStream",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Comment reconnaître et classer un morceau de musique à partir du son ?",
+    "description": "Plateforme musicale familiale auto-hébergée sur Raspberry Pi, budget 0 €, 100 % open source.",
+    "maPart": "Projet YDays de 400 h, équipe de 6 (2 développeurs de M1, 4 profils data). Je développe la partie IA : un modèle de Machine Learning qui reconnaît et classe les morceaux à partir du son. J'ai aussi réalisé les maquettes de l'application.",
+    "resultats": [],
+    "outils": ["Python", "librosa", "scikit-learn", "FastAPI", "Docker"],
+    "statut": "en-cours",
+    "categories": ["ia", "data"],
+    "lien": {
+      "url": "https://github.com/Riantsoa11/hiraStream",
+      "note": "Le dépôt doit passer en public. S'il est encore privé à la phase 09, pas de lien."
+    },
+    "visuel": { "source": "Schéma d'architecture à créer, ma partie en ambre", "phase": "09" },
+    "recit": {
+      "contexte": "HiraStream est un projet YDays : les équipes mélangent les filières et les niveaux, du B1 au master.",
+      "retenu": "L'an dernier, sur Héritage, j'étais en soutien. Cette année, j'ai pris l'initiative : j'ai fait les maquettes et j'ai poussé l'équipe à fixer les couleurs, les formes et la façon de coder avant d'écrire la première ligne. En parallèle, je développe la partie IA. J'ai beaucoup plus d'impact sur le projet.",
+      "retenuProvisoire": true
+    }
+  },
+  {
+    "slug": "lelon",
+    "numero": "04",
+    "titre": "LELON",
+    "vedette": true,
+    "aUnePage": true,
+    "question": "Peut-on lancer une marque et sa boutique en pilotant des agents IA ?",
+    "description": "Ma marque de sacs à main, lancée en septembre 2026, avec sa boutique en ligne.",
+    "maPart": "Fondateur. Le code du site a été écrit par Claude Code sous ma direction : la compétence montrée ici n'est pas le code.",
+    "resultats": ["Marque de sacs à main lancée en septembre 2026, boutique en ligne"],
+    "outils": ["Shopify", "Agents IA"],
+    "statut": "en-ligne",
+    "categories": ["ia", "dev-web"],
+    "lien": { "url": "https://lelon.fr" },
+    "visuel": { "source": "Capture de la page d'accueil de lelon.fr", "phase": "09" },
+    "recit": {
+      "contexte": "Tout est parti d'une envie : avoir ma propre marque.",
+      "maPart": "J'ai créé mon entreprise et fait mes premières déclarations à l'URSSAF. J'ai configuré Shopify réglage par réglage, paiements compris. Le code du site, c'est Claude Code qui l'a écrit, sous ma direction.",
+      "retenu": "Ce projet ne montre pas du code, il montre tout ce qu'il y a autour : créer une entreprise, gérer l'administratif, monter une boutique et diriger une IA. Mes compétences ne s'arrêtent pas à la fin des cours."
+    }
+  },
+  {
+    "slug": "world-cup-winner",
+    "numero": "05",
+    "titre": "World Cup Winner",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "Quelle équipe gagnera la Coupe du monde 2030 ?",
+    "description": "Prédire le vainqueur de la Coupe du monde 2030.",
+    "maPart": "Équipe de 3. Je m'occupe de l'analyse des données.",
+    "resultats": [],
+    "outils": ["Python", "Machine Learning"],
+    "statut": "en-cours",
+    "categories": ["data", "ia"],
+    "lien": { "url": "https://github.com/HOUDAED/World_Cup_Winner" },
+    "visuel": { "source": "À définir", "phase": "09" },
+    "recit": {
+      "contexte": "Un projet en autonomie sur toute l'année, en équipe de trois, qui mêle data et IA. J'adore le foot, alors le sujet me parle.",
+      "demarche": "Prédire le vainqueur de la Coupe du monde 2030 en lançant de nombreuses simulations, puis regarder quelle équipe ressort le plus souvent.",
+      "retenu": "Le foot ne suit jamais les prédictions. C'est ce qui rend le projet intéressant : en 2030, on pourra comparer nos simulations avec le vrai résultat.",
+      "retenuProvisoire": true
+    }
+  },
+  {
+    "slug": "heritage",
+    "numero": "06",
+    "titre": "Héritage (YDays)",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "Application sociale de partage d'histoires familiales.",
+    "maPart": "En soutien des M2 data et dev web : participation au front, PWA (application installable) codée par moi, idées pour la base de données, le menu et l'accueil.",
+    "resultats": [],
+    "outils": ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "statut": "termine",
+    "categories": ["data", "dev-web"],
+    "lien": { "url": "https://github.com/STimour/Heritage_ydays" },
+    "visuel": { "source": "À définir", "phase": "09" },
+    "recit": {
+      "contexte": "Mon premier vrai projet professionnel, en B1, en soutien d'étudiants de M2 data et développement web.",
+      "maPart": "J'ai participé au front et codé moi-même la PWA, qui rend l'application installable. J'ai aussi proposé des idées pour la base de données, le menu et l'accueil.",
+      "retenu": "Je pensais qu'un projet, c'était arriver et coder. J'ai découvert qu'avant la première ligne, on réfléchit à chaque détail : la couleur, l'aspect commercial, l'image, la communication. J'ai aussi compris comment un site se construit, entre le front, le back et la base de données. C'est ce projet qui m'a donné les réflexes que j'applique cette année sur HiraStream."
+    }
+  },
+  {
+    "slug": "groupie-tracker",
+    "numero": "07",
+    "titre": "Groupie Tracker « REK »",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "Jeu multijoueur de blind test et de petit bac dans le navigateur.",
+    "maPart": "Équipe de 3. J'ai développé les salles de jeu, le blind test avec l'API Spotify et le README.",
+    "resultats": [],
+    "outils": ["Go", "API Spotify", "SQLite"],
+    "statut": "termine",
+    "categories": ["dev-web"],
+    "lien": { "url": "https://github.com/Lyon-Ynov-Campus/groupie-tracker-rek" },
+    "visuel": { "source": "À définir", "phase": "09" },
+    "recit": {
+      "contexte": "Un projet de B1 en groupe de trois : coder un site de blind test et de petit bac.",
+      "maPart": "J'ai intégré l'API Spotify et codé le front du blind test, ainsi que les salles de jeu.",
+      "retenu": "C'était la première fois que je récupérais et intégrais une API. L'une des deux API prévues ne fonctionnait pas : j'ai dû m'adapter et passer par Spotify."
+    }
+  },
+  {
+    "slug": "power4",
+    "numero": "08",
+    "titre": "Power4",
+    "vedette": false,
+    "aUnePage": true,
+    "question": "",
+    "description": "Puissance 4 jouable à deux ou contre un bot.",
+    "maPart": "Seul, projet de B1.",
+    "resultats": [],
+    "outils": ["Go", "HTML", "CSS"],
+    "statut": "termine",
+    "categories": ["dev-web"],
+    "lien": { "url": "https://github.com/krm3z/Power4" },
+    "visuel": { "source": "À définir", "phase": "09" },
+    "recit": {
+      "contexte": "Mon premier projet de B1, en début d'année. Jusque-là, nos jeux tournaient dans le terminal.",
+      "maPart": "Seul, j'ai codé le jeu en Go, avec son interface web et un bot à plusieurs niveaux de difficulté.",
+      "retenu": "C'était la première fois que mon code devenait un vrai site. Le Puissance 4, tout le monde connaît : j'ai soigné les couleurs et respecté toute la consigne. Ce n'est pas mon projet le plus important, mais c'est celui où j'ai vu mon code prendre forme."
+    }
+  },
+  {
+    "slug": "energie",
+    "numero": "09",
+    "titre": "Énergie",
+    "vedette": false,
+    "aUnePage": false,
+    "question": "",
+    "description": "Projet data sur le secteur de l'énergie.",
+    "maPart": "",
+    "resultats": [],
+    "outils": [],
+    "statut": "prochainement",
+    "categories": ["data"],
+    "lien": { "url": null },
+    "visuel": { "source": "Aucun (carte « Prochainement »)", "phase": "—" },
+    "recit": {}
+  }
+]

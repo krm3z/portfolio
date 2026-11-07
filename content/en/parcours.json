@@ -1,0 +1,57 @@
+[
+  {
+    "id": "bac-sti2d",
+    "periode": "2025",
+    "debut": "2025-06",
+    "titre": "French baccalaureate STI2D, digital systems (SIN) track",
+    "detail": "With honours (mention Assez Bien)",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "b1-ynov",
+    "periode": "2025 – 2026",
+    "debut": "2025-09",
+    "titre": "First year, Computer Science",
+    "organisation": "Ynov Lyon Campus",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "carrefour",
+    "periode": "Since Sept. 2026",
+    "debut": "2026-09",
+    "titre": "Cashier",
+    "organisation": "Carrefour",
+    "detail": "25 hours a week alongside my studies",
+    "type": "experience",
+    "ambre": false
+  },
+  {
+    "id": "lelon-fondateur",
+    "periode": "Since Sept. 2026",
+    "debut": "2026-09",
+    "titre": "Founder",
+    "organisation": "LELON",
+    "detail": "Handbag brand",
+    "type": "experience",
+    "ambre": false
+  },
+  {
+    "id": "b2-ynov",
+    "periode": "2026 – 2027",
+    "debut": "2026-09",
+    "titre": "Second year, AI & Data",
+    "organisation": "Ynov Lyon Campus",
+    "type": "formation",
+    "ambre": false
+  },
+  {
+    "id": "objectif-alternance",
+    "periode": "Sept. 2027",
+    "debut": "2027-09",
+    "titre": "Goal: Data Analyst apprenticeship (third year)",
+    "type": "objectif",
+    "ambre": true
+  }
+]

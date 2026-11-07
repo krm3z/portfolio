@@ -1,0 +1,113 @@
+[
+  {
+    "id": "analyse",
+    "titre": "Data analysis",
+    "competences": [
+      {
+        "id": "question-business",
+        "libelle": "Turn a business question into an analysis problem",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "pollution-meteo" },
+          { "type": "projet", "slug": "world-cup-winner" }
+        ]
+      },
+      {
+        "id": "etl",
+        "libelle": "Collect, clean and prepare data (ETL pipelines)",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "pollution-meteo" }
+        ]
+      },
+      {
+        "id": "sql",
+        "libelle": "Analyse in SQL: joins, aggregations, trends",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "heritage" }
+        ]
+      },
+      {
+        "id": "dashboards",
+        "libelle": "Build dashboards and tell what the numbers say",
+        "preuves": [{ "type": "projet", "slug": "nasa-data-pipeline" }]
+      }
+    ]
+  },
+  {
+    "id": "ia",
+    "titre": "AI",
+    "competences": [
+      {
+        "id": "agents-ia",
+        "libelle": "Direct AI agents: scope, break down, write prompts, check, fix",
+        "preuves": [
+          { "type": "projet", "slug": "lelon" },
+          { "type": "page", "href": "/making-of" }
+        ]
+      },
+      {
+        "id": "machine-learning",
+        "libelle": "Build Machine Learning models (audio recognition, prediction)",
+        "preuves": [
+          { "type": "projet", "slug": "hirastream" },
+          { "type": "projet", "slug": "world-cup-winner" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "technique",
+    "titre": "Technical",
+    "competences": [
+      {
+        "id": "linux",
+        "libelle": "Work on Linux and the command line",
+        "preuves": [{ "type": "projet", "slug": "hirastream" }]
+      },
+      {
+        "id": "git-equipe",
+        "libelle": "Collaborate with Git in a team (issues, pull requests)",
+        "preuves": [
+          { "type": "projet", "slug": "heritage" },
+          { "type": "projet", "slug": "groupie-tracker" },
+          { "type": "projet", "slug": "hirastream" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "savoir-etre",
+    "titre": "Soft skills",
+    "competences": [
+      {
+        "id": "organisation",
+        "libelle": "Organisation: studies, 25 hours a week at Carrefour and a brand on the side",
+        "preuves": [
+          { "type": "parcours", "id": "b2-ynov" },
+          { "type": "parcours", "id": "carrefour" },
+          { "type": "parcours", "id": "lelon-fondateur" }
+        ]
+      },
+      {
+        "id": "entrepreneur",
+        "libelle": "Entrepreneurial mindset",
+        "preuves": [{ "type": "projet", "slug": "lelon" }]
+      },
+      {
+        "id": "relation-client",
+        "libelle": "Customer relations",
+        "preuves": [{ "type": "parcours", "id": "carrefour" }]
+      },
+      {
+        "id": "equipe",
+        "libelle": "Teamwork, in teams of up to 6",
+        "preuves": [
+          { "type": "projet", "slug": "hirastream" },
+          { "type": "projet", "slug": "heritage" }
+        ]
+      }
+    ]
+  }
+]

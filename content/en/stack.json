@@ -1,0 +1,271 @@
+{
+  "niveaux": [
+    {
+      "id": "maitrise",
+      "libelle": "Proficient",
+      "segments": 3
+    },
+    {
+      "id": "progression",
+      "libelle": "Improving",
+      "segments": 2
+    },
+    {
+      "id": "bases",
+      "libelle": "Basics",
+      "segments": 1
+    }
+  ],
+  "outils": [
+    {
+      "id": "sql",
+      "nom": "SQL",
+      "detail": "PostgreSQL, SQLite, MySQL",
+      "niveau": "maitrise",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        },
+        {
+          "type": "projet",
+          "slug": "heritage"
+        },
+        {
+          "type": "projet",
+          "slug": "groupie-tracker"
+        }
+      ]
+    },
+    {
+      "id": "excel",
+      "nom": "Excel",
+      "niveau": "maitrise",
+      "preuves": []
+    },
+    {
+      "id": "git",
+      "nom": "Git and GitHub",
+      "niveau": "maitrise",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "heritage"
+        },
+        {
+          "type": "projet",
+          "slug": "groupie-tracker"
+        },
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        },
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        }
+      ]
+    },
+    {
+      "id": "linux",
+      "nom": "Linux",
+      "detail": "Debian, command line",
+      "niveau": "maitrise",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        }
+      ]
+    },
+    {
+      "id": "agents-ia",
+      "nom": "Directing AI agents",
+      "niveau": "maitrise",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "lelon"
+        },
+        {
+          "type": "page",
+          "href": "/making-of"
+        }
+      ]
+    },
+    {
+      "id": "power-bi",
+      "nom": "Power BI",
+      "detail": "learned on the NASA project",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "nom": "Python",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        },
+        {
+          "type": "projet",
+          "slug": "pollution-meteo"
+        },
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        },
+        {
+          "type": "projet",
+          "slug": "world-cup-winner"
+        }
+      ]
+    },
+    {
+      "id": "pandas",
+      "nom": "pandas",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "pollution-meteo"
+        }
+      ]
+    },
+    {
+      "id": "api-rest",
+      "nom": "REST APIs and JSON",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        },
+        {
+          "type": "projet",
+          "slug": "groupie-tracker"
+        },
+        {
+          "type": "projet",
+          "slug": "pollution-meteo"
+        }
+      ]
+    },
+    {
+      "id": "etl",
+      "nom": "ETL pipelines",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "nasa-data-pipeline"
+        },
+        {
+          "type": "projet",
+          "slug": "pollution-meteo"
+        }
+      ]
+    },
+    {
+      "id": "ml-audio",
+      "nom": "Audio Machine Learning",
+      "detail": "librosa, scikit-learn",
+      "niveau": "progression",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        }
+      ]
+    },
+    {
+      "id": "html-css",
+      "nom": "HTML/CSS",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "power4"
+        },
+        {
+          "type": "projet",
+          "slug": "groupie-tracker"
+        }
+      ]
+    },
+    {
+      "id": "js-ts",
+      "nom": "JavaScript/TypeScript",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "heritage"
+        }
+      ]
+    },
+    {
+      "id": "react-next",
+      "nom": "React/Next.js",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "heritage"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "nom": "Go",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "power4"
+        },
+        {
+          "type": "projet",
+          "slug": "groupie-tracker"
+        }
+      ]
+    },
+    {
+      "id": "fastapi",
+      "nom": "FastAPI",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "pollution-meteo"
+        },
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        }
+      ]
+    },
+    {
+      "id": "docker",
+      "nom": "Docker",
+      "niveau": "bases",
+      "preuves": [
+        {
+          "type": "projet",
+          "slug": "heritage"
+        },
+        {
+          "type": "projet",
+          "slug": "hirastream"
+        }
+      ]
+    }
+  ]
+}

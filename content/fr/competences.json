@@ -1,0 +1,113 @@
+[
+  {
+    "id": "analyse",
+    "titre": "Analyse de données",
+    "competences": [
+      {
+        "id": "question-business",
+        "libelle": "Transformer une question business en problématique d'analyse",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "pollution-meteo" },
+          { "type": "projet", "slug": "world-cup-winner" }
+        ]
+      },
+      {
+        "id": "etl",
+        "libelle": "Collecter, nettoyer et préparer les données (pipelines ETL)",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "pollution-meteo" }
+        ]
+      },
+      {
+        "id": "sql",
+        "libelle": "Analyser en SQL : jointures, agrégations, tendances",
+        "preuves": [
+          { "type": "projet", "slug": "nasa-data-pipeline" },
+          { "type": "projet", "slug": "heritage" }
+        ]
+      },
+      {
+        "id": "dashboards",
+        "libelle": "Construire des dashboards et raconter ce que disent les chiffres",
+        "preuves": [{ "type": "projet", "slug": "nasa-data-pipeline" }]
+      }
+    ]
+  },
+  {
+    "id": "ia",
+    "titre": "IA",
+    "competences": [
+      {
+        "id": "agents-ia",
+        "libelle": "Piloter des agents IA : cadrer, découper, écrire les prompts, vérifier, corriger",
+        "preuves": [
+          { "type": "projet", "slug": "lelon" },
+          { "type": "page", "href": "/making-of" }
+        ]
+      },
+      {
+        "id": "machine-learning",
+        "libelle": "Créer des modèles de Machine Learning (reconnaissance audio, prédiction)",
+        "preuves": [
+          { "type": "projet", "slug": "hirastream" },
+          { "type": "projet", "slug": "world-cup-winner" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "technique",
+    "titre": "Technique",
+    "competences": [
+      {
+        "id": "linux",
+        "libelle": "Travailler sous Linux et en ligne de commande",
+        "preuves": [{ "type": "projet", "slug": "hirastream" }]
+      },
+      {
+        "id": "git-equipe",
+        "libelle": "Collaborer avec Git en équipe (issues, pull requests)",
+        "preuves": [
+          { "type": "projet", "slug": "heritage" },
+          { "type": "projet", "slug": "groupie-tracker" },
+          { "type": "projet", "slug": "hirastream" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "savoir-etre",
+    "titre": "Savoir-être",
+    "competences": [
+      {
+        "id": "organisation",
+        "libelle": "Organisation : études, 25 h par semaine chez Carrefour et une marque en parallèle",
+        "preuves": [
+          { "type": "parcours", "id": "b2-ynov" },
+          { "type": "parcours", "id": "carrefour" },
+          { "type": "parcours", "id": "lelon-fondateur" }
+        ]
+      },
+      {
+        "id": "entrepreneur",
+        "libelle": "Esprit entrepreneur",
+        "preuves": [{ "type": "projet", "slug": "lelon" }]
+      },
+      {
+        "id": "relation-client",
+        "libelle": "Relation client",
+        "preuves": [{ "type": "parcours", "id": "carrefour" }]
+      },
+      {
+        "id": "equipe",
+        "libelle": "Travail en équipe, jusqu'à 6 personnes",
+        "preuves": [
+          { "type": "projet", "slug": "hirastream" },
+          { "type": "projet", "slug": "heritage" }
+        ]
+      }
+    ]
+  }
+]

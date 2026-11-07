@@ -18,6 +18,8 @@ Une entrée par phase : ce qui a été demandé, ce qui a été refait et pourqu
 - Les questions des projets 06, 07 et 08 : je les avais formulées moi-même. La section F ne les donne pas, donc je les ai vidées en attendant la réponse de Kerem (règle « zéro invention »).
 - `references/photos/` et `references/stylise/` exclus du premier commit : le dépôt est public et ces dossiers contiennent le visage de Kerem. Publication seulement après son accord.
 
+**Validation (même jour)** : Kerem a donné les questions des projets 06 à 08, choisi les textes d'interface (loader avec son nom, « Me contacter », micro-texte « // Portfolio © 2026 »), fixé la traduction des années (« 1st, 2nd, 3rd year of Bachelor's ») et les intitulés des 13 phases. J'ai retiré 17 jeux de règles ECC sans rapport avec le projet (ArkTS, Vue, PHP, Rust…). On garde common, python, react, typescript et web. Phase validée en un seul aller-retour.
+
 **Chiffres**
 - Skills : 282 · agents : 71 · commandes : 98 (conformes aux comptes attendus).
 - Poids de `.claude/` : environ 51 Mo (le plus gros fichier : une vidéo de démo de 3,8 Mo dans le skill scroll-world-storytelling).

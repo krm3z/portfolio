@@ -6,34 +6,44 @@ Les sections B à G ci-dessous sont recopiées intégralement depuis `prompts/00
 ## Sommaire
 
 1. [Phases et statuts](#phases-et-statuts)
-2. [Repères du dépôt](#repères-du-dépôt)
-3. [B. Le projet](#b-le-projet)
-4. [C. Les deux références, décrites plan par plan](#c-les-deux-références-décrites-plan-par-plan)
-5. [D. Direction artistique (obligatoire)](#d-direction-artistique-obligatoire)
-6. [E. Plan du site et chapitres (ordre réel d'affichage)](#e-plan-du-site-et-chapitres-ordre-réel-daffichage)
-7. [F. Contenu (source unique)](#f-contenu-source-unique)
-8. [G. Technique, conventions, budgets, skills et règles de travail](#g-technique-conventions-budgets-skills-et-règles-de-travail)
+2. [Décisions validées en phase 00](#décisions-validées-en-phase-00)
+3. [Repères du dépôt](#repères-du-dépôt)
+4. [B. Le projet](#b-le-projet)
+5. [C. Les deux références, décrites plan par plan](#c-les-deux-références-décrites-plan-par-plan)
+6. [D. Direction artistique (obligatoire)](#d-direction-artistique-obligatoire)
+7. [E. Plan du site et chapitres (ordre réel d'affichage)](#e-plan-du-site-et-chapitres-ordre-réel-daffichage)
+8. [F. Contenu (source unique)](#f-contenu-source-unique)
+9. [G. Technique, conventions, budgets, skills et règles de travail](#g-technique-conventions-budgets-skills-et-règles-de-travail)
 
 ## Phases et statuts
 
 Statuts possibles : à faire · en cours · validée. Mis à jour à la fin de chaque phase.
-Les intitulés marqués « (à confirmer) » sont déduits des indices du prompt 00 ; l'intitulé officiel vient du prompt de la phase.
 
 | Phase | Intitulé | Statut | Prompt |
 |---|---|---|---|
-| 00 | Mise en place du projet | en cours | prompts/00-mise-en-place.md |
+| 00 | Mise en place du projet | validée (07/11/2026) | prompts/00-mise-en-place.md · prompts/00-reponses-validation.md |
 | 01 | Direction artistique | à faire | prompts/01-direction-artistique.md |
-| 02 | (à venir) | à faire | |
-| 03 | (à venir) | à faire | |
-| 04 | Architecture et socle technique, script de captures (à confirmer) | à faire | |
-| 05 | Entrée cinématique (à confirmer) | à faire | |
-| 06 | (à venir) | à faire | |
-| 07 | (à venir) | à faire | |
-| 08 | (à venir) | à faire | |
-| 09 | Pages projets et visuels (à confirmer) | à faire | |
-| 10 | (à venir) | à faire | |
-| 11 | Performance et SEO (à confirmer) | à faire | |
-| 12 | (à venir) | à faire | |
+| 02 | Avatar | à faire | |
+| 03 | Scènes 3D Blender | à faire | |
+| 04 | Base du site et loader | à faire | |
+| 05 | Entrée cinématique | à faire | |
+| 06 | Accueil et À propos | à faire | |
+| 07 | Compétences au bureau | à faire | |
+| 08 | Parcours | à faire | |
+| 09 | Projets | à faire | |
+| 10 | Stack, contact, making-of | à faire | |
+| 11 | Finitions et mise en ligne | à faire | |
+| 12 | Revue finale | à faire | |
+
+## Décisions validées en phase 00
+
+- Photos : `references/photos/` et `references/stylise/` restent hors du dépôt public (`.gitignore`). On les utilise en local seulement.
+- Textes d'interface (déjà dans `content/*/ui.json`) : « Bonjour, je suis » avant le nom ; au-dessus du mot qui alterne : « En recherche d'alternance · sept. 2027 » ; loader : « DATA ANALYST • KEREM UYSAL • IA & DATA • » ; bouton du contact : « Me contacter → » (la flèche est une icône, pas du texte) ; micro-texte de l'intro : « // Portfolio © 2026 », « Kerem Uysal », « Data Analyst · alternance sept. 2027 ».
+- Anglais : « Pollution & Weather », « Energy » ; B1, B2, B3 = « 1st, 2nd, 3rd year of Bachelor's ».
+- Power4 : le bot a 4 niveaux de difficulté, dont 2 avec minimax (ajouté aux résultats).
+- Correspondances compétences → projets et stack → projets : validées telles quelles (Excel sans preuve ; « Organisation » reliée aux lignes b2-ynov, carrefour, lelon-fondateur du parcours).
+- HiraStream : le dépôt n'est pas encore public. Réserve maintenue : pas de lien tant qu'il est privé.
+- Règles ECC conservées : common, typescript, react, web, python. Les autres langages ont été retirés.
 
 ## Repères du dépôt
 
@@ -42,7 +52,7 @@ Les intitulés marqués « (à confirmer) » sont déduits des indices du prompt
 - `prompts/` : chaque prompt de phase, mot pour mot.
 - `making-of/phase-XX/` : captures avant, intermédiaires, après. `making-of/notes.md` : une entrée par phase.
 - `references/photos/` : photos de Kerem. Ne jamais modifier. `references/stylise/` : planches stylisées déposées par Kerem (avatar, extérieur, intérieur, manteau). Ne jamais modifier.
-- `.claude/` : skills, agents, commandes, règles ECC copiés depuis github.com/krm3z/Lelon (282 skills, 71 agents, 98 commandes au 07/11/2026). Skills du compte : site-3d-immersif, mentor-data, dataviz, deep-research, etc.
+- `.claude/` : skills, agents, commandes, règles ECC copiés depuis github.com/krm3z/Lelon (282 skills, 71 agents, 98 commandes au 07/11/2026). Règles ECC : `.claude/rules/ecc/` garde common, python, react, typescript, web. Skills du compte : site-3d-immersif, mentor-data, dataviz, deep-research, etc.
 - Environnement : Windows 11, PowerShell. Node 26, npm 11, git 2.56, gh 2.103 connecté au compte krm3z.
 
 ---

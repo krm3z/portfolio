@@ -32,7 +32,7 @@
     "couper": "Couper le son"
   },
   "loader": {
-    "texteDefilant": "DATA ANALYST • IA & DATA •",
+    "texteDefilant": "DATA ANALYST • KEREM UYSAL • IA & DATA •",
     "chargement": "Chargement",
     "entrer": "Entrer",
     "entrerLabel": "Entrer sur le site"
@@ -41,14 +41,14 @@
     "passerIntro": "Passer l'intro",
     "invitationScroll": "Faites défiler",
     "microTexte": {
-      "ligne1": "© 2026 Kerem Uysal",
-      "ligne2": "Data Analyst · B2 IA & Data",
-      "ligne3": "Alternance dès sept. 2027"
+      "ligne1": "// Portfolio © 2026",
+      "ligne2": "Kerem Uysal",
+      "ligne3": "Data Analyst · alternance sept. 2027"
     }
   },
   "accueil": {
     "bonjour": "Bonjour, je suis",
-    "avant": "Data, outils et IA"
+    "avant": "En recherche d'alternance · sept. 2027"
   },
   "apropos": {
     "titre": "À propos"
@@ -123,7 +123,7 @@
   },
   "contact": {
     "titre": "Contact",
-    "meRecruter": "Me recruter",
+    "meContacter": "Me contacter",
     "email": "Email",
     "localisation": "Localisation",
     "reseaux": "Réseaux",

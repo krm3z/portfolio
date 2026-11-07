@@ -12,7 +12,7 @@
     "id": "b1-ynov",
     "periode": "2025 – 2026",
     "debut": "2025-09",
-    "titre": "First year, Computer Science",
+    "titre": "1st year of Bachelor's, Computer Science",
     "organisation": "Ynov Lyon Campus",
     "type": "formation",
     "ambre": false
@@ -41,7 +41,7 @@
     "id": "b2-ynov",
     "periode": "2026 – 2027",
     "debut": "2026-09",
-    "titre": "Second year, AI & Data",
+    "titre": "2nd year of Bachelor's, AI & Data",
     "organisation": "Ynov Lyon Campus",
     "type": "formation",
     "ambre": false
@@ -50,7 +50,7 @@
     "id": "objectif-alternance",
     "periode": "Sept. 2027",
     "debut": "2027-09",
-    "titre": "Goal: Data Analyst apprenticeship (third year)",
+    "titre": "Goal: Data Analyst apprenticeship (3rd year of Bachelor's)",
     "type": "objectif",
     "ambre": true
   }

@@ -2,7 +2,7 @@
   "meta": {
     "langue": "en",
     "titreSite": "Kerem Uysal · Data Analyst",
-    "descriptionSite": "Portfolio of Kerem Uysal, second-year AI & Data student at Ynov Lyon. Looking for a Data Analyst apprenticeship from September 2027."
+    "descriptionSite": "Portfolio of Kerem Uysal, 2nd year of Bachelor's in AI & Data at Ynov Lyon. Looking for a Data Analyst apprenticeship from September 2027."
   },
   "navigation": {
     "allerAuContenu": "Skip to content",
@@ -32,7 +32,7 @@
     "couper": "Turn sound off"
   },
   "loader": {
-    "texteDefilant": "DATA ANALYST • AI & DATA •",
+    "texteDefilant": "DATA ANALYST • KEREM UYSAL • AI & DATA •",
     "chargement": "Loading",
     "entrer": "Enter",
     "entrerLabel": "Enter the site"
@@ -41,14 +41,14 @@
     "passerIntro": "Skip intro",
     "invitationScroll": "Scroll",
     "microTexte": {
-      "ligne1": "© 2026 Kerem Uysal",
-      "ligne2": "Data Analyst · AI & Data student",
-      "ligne3": "Apprenticeship from Sept. 2027"
+      "ligne1": "// Portfolio © 2026",
+      "ligne2": "Kerem Uysal",
+      "ligne3": "Data Analyst · apprenticeship Sept. 2027"
     }
   },
   "accueil": {
     "bonjour": "Hi, I'm",
-    "avant": "Data, tools and AI"
+    "avant": "Looking for an apprenticeship · Sept. 2027"
   },
   "apropos": {
     "titre": "About me"
@@ -123,7 +123,7 @@
   },
   "contact": {
     "titre": "Contact",
-    "meRecruter": "Hire me",
+    "meContacter": "Get in touch",
     "email": "Email",
     "localisation": "Location",
     "reseaux": "Social",

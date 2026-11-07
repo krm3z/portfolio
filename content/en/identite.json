@@ -1,11 +1,11 @@
 {
   "nom": "Kerem Uysal",
-  "titre": "Data Analyst · second-year AI & Data student",
+  "titre": "Data Analyst · 2nd year of Bachelor's in AI & Data",
   "ecole": "Ynov Lyon Campus",
   "localisation": "Lyon area · open to relocating anywhere in France",
   "recherche": {
     "resume": "Data Analyst apprenticeship from September 2027",
-    "poste": "Data Analyst apprenticeship for my third year",
+    "poste": "Data Analyst apprenticeship for my 3rd year of Bachelor's",
     "debut": "September 2027",
     "rythme": "3 weeks at the company, 1 week at school"
   },
@@ -23,15 +23,36 @@
     "motAmbre": "sheds light"
   },
   "motsAlternes": [
-    { "texte": "DATA ANALYST", "ambre": true },
-    { "texte": "SQL", "ambre": false },
-    { "texte": "POWER BI", "ambre": false },
-    { "texte": "GENERATIVE AI", "ambre": false }
+    {
+      "texte": "DATA ANALYST",
+      "ambre": true
+    },
+    {
+      "texte": "SQL",
+      "ambre": false
+    },
+    {
+      "texte": "POWER BI",
+      "ambre": false
+    },
+    {
+      "texte": "GENERATIVE AI",
+      "ambre": false
+    }
   ],
-  "apropos": "Second-year AI & Data student at Ynov Lyon. Alongside my classes, I work 25 hours a week at Carrefour, I launched my handbag brand LELON in September 2026, and I build websites and AI tools by directing agents. What I enjoy in data is finding, in the numbers, what helps people decide. I'm looking for a Data Analyst apprenticeship for my third year, starting September 2027.",
+  "apropos": "Student in the 2nd year of a Bachelor's in AI & Data at Ynov Lyon. Alongside my classes, I work 25 hours a week at Carrefour, I launched my handbag brand LELON in September 2026, and I build websites and AI tools by directing agents. What I enjoy in data is finding, in the numbers, what helps people decide. I'm looking for a Data Analyst apprenticeship for my 3rd year of Bachelor's, starting September 2027.",
   "chiffresCles": [
-    { "valeur": "11,246", "libelle": "NASA publications analysed" },
-    { "valeur": "8", "libelle": "data, web and AI projects" },
-    { "valeur": "25 h", "libelle": "a week at Carrefour, alongside my studies" }
+    {
+      "valeur": "11,246",
+      "libelle": "NASA publications analysed"
+    },
+    {
+      "valeur": "8",
+      "libelle": "data, web and AI projects"
+    },
+    {
+      "valeur": "25 h",
+      "libelle": "a week at Carrefour, alongside my studies"
+    }
   ]
 }

@@ -15,11 +15,24 @@
       "Spirit in 2004: 8 titles, 5 of them in January",
       "By 2025, Webb shows up as often as Hubble"
     ],
-    "outils": ["Python", "NASA API", "SQLite", "SQL", "Power BI"],
+    "outils": [
+      "Python",
+      "NASA API",
+      "SQLite",
+      "SQL",
+      "Power BI"
+    ],
     "statut": "termine",
-    "categories": ["data"],
-    "lien": { "url": "https://github.com/krm3z/nasa-data-pipeline" },
-    "visuel": { "source": "docs/missions.png (nasa-data-pipeline repo, the dashboard)", "phase": "09" },
+    "categories": [
+      "data"
+    ],
+    "lien": {
+      "url": "https://github.com/krm3z/nasa-data-pipeline"
+    },
+    "visuel": {
+      "source": "docs/missions.png (nasa-data-pipeline repo, the dashboard)",
+      "phase": "09"
+    },
     "recit": {
       "contexte": "It all started with Interstellar, which I've watched dozens of times. I pitched the topic to Edvige, and found out that NASA has published one picture a day since 1995.",
       "retenu": "I used to think data analysis meant running queries on a database where everything is already sorted. In practice, SQL showed me the peaks, but the investigation explained them: searching the web for what happened, month by month. That was my favourite part. It was also my first Power BI project. If you know Excel, you find your way around fast, and watching 30 years of data take shape in a chart was beautiful to me."
@@ -41,13 +54,24 @@
       "4 levels: low, moderate, high, critical",
       "FastAPI service with 5 routes"
     ],
-    "outils": ["Python", "pandas", "FastAPI"],
+    "outils": [
+      "Python",
+      "pandas",
+      "FastAPI"
+    ],
     "statut": "termine",
-    "categories": ["data"],
-    "lien": { "url": "https://github.com/krm3z/pollution-meteo-data-pipeline" },
-    "visuel": { "source": "To build from output/final_dataset.csv (pollution-meteo-data-pipeline repo)", "phase": "09" },
+    "categories": [
+      "data"
+    ],
+    "lien": {
+      "url": "https://github.com/krm3z/pollution-meteo-data-pipeline"
+    },
+    "visuel": {
+      "source": "To build from output/final_dataset.csv (pollution-meteo-data-pipeline repo)",
+      "phase": "09"
+    },
     "recit": {
-      "contexte": "During Ynov's 48-hour data challenge, the AI and data team members didn't show up. I was in my first year, and I took that part on. The project lead chose to redo the analysis on his own, and he reached the same results. So I decided to finish the job in my own repo, covering the full brief and going further: geospatial join, impact index and API.",
+      "contexte": "During Ynov's 48-hour data challenge, the AI and data team members didn't show up. I was in my 1st year of Bachelor's, and I took that part on. The project lead chose to redo the analysis on his own, and he reached the same results. So I decided to finish the job in my own repo, covering the full brief and going further: geospatial join, impact index and API.",
       "retenu": "When you're the youngest on the team, being right isn't enough: you also have to show it. This project taught me to see my work through and to back it up with evidence."
     }
   },
@@ -61,16 +85,28 @@
     "description": "A self-hosted family music platform on a Raspberry Pi, zero budget, fully open source.",
     "maPart": "400-hour YDays project, team of 6 (2 master's developers, 4 data profiles). I'm building the AI part: a Machine Learning model that recognises and classifies tracks from their sound. I also designed the app mock-ups.",
     "resultats": [],
-    "outils": ["Python", "librosa", "scikit-learn", "FastAPI", "Docker"],
+    "outils": [
+      "Python",
+      "librosa",
+      "scikit-learn",
+      "FastAPI",
+      "Docker"
+    ],
     "statut": "en-cours",
-    "categories": ["ia", "data"],
+    "categories": [
+      "ia",
+      "data"
+    ],
     "lien": {
       "url": "https://github.com/Riantsoa11/hiraStream",
       "note": "The repo has to go public. If it is still private in phase 09, no link."
     },
-    "visuel": { "source": "Architecture diagram to create, my part in amber", "phase": "09" },
+    "visuel": {
+      "source": "Architecture diagram to create, my part in amber",
+      "phase": "09"
+    },
     "recit": {
-      "contexte": "HiraStream is a YDays project: teams mix programmes and levels, from first year to master's.",
+      "contexte": "HiraStream is a YDays project: teams mix programmes and levels, from 1st year of Bachelor's to master's.",
       "retenu": "Last year, on Héritage, I was in a support role. This year, I took the lead: I made the mock-ups and pushed the team to agree on colours, shapes and coding conventions before writing the first line. Alongside that, I'm building the AI part. I have far more impact on the project.",
       "retenuProvisoire": true
     }
@@ -84,12 +120,25 @@
     "question": "Can you launch a brand and its online store by directing AI agents?",
     "description": "My handbag brand, launched in September 2026, with its online store.",
     "maPart": "Founder. Claude Code wrote the site's code under my direction: the skill on show here is not the code.",
-    "resultats": ["Handbag brand launched in September 2026, with an online store"],
-    "outils": ["Shopify", "AI agents"],
+    "resultats": [
+      "Handbag brand launched in September 2026, with an online store"
+    ],
+    "outils": [
+      "Shopify",
+      "AI agents"
+    ],
     "statut": "en-ligne",
-    "categories": ["ia", "dev-web"],
-    "lien": { "url": "https://lelon.fr" },
-    "visuel": { "source": "Screenshot of the lelon.fr home page", "phase": "09" },
+    "categories": [
+      "ia",
+      "dev-web"
+    ],
+    "lien": {
+      "url": "https://lelon.fr"
+    },
+    "visuel": {
+      "source": "Screenshot of the lelon.fr home page",
+      "phase": "09"
+    },
     "recit": {
       "contexte": "It all started with one wish: to have my own brand.",
       "maPart": "I set up my company and filed my first URSSAF declarations. I configured Shopify setting by setting, payments included. Claude Code wrote the site's code, under my direction.",
@@ -106,11 +155,22 @@
     "description": "Predicting the winner of the 2030 World Cup.",
     "maPart": "Team of 3. I handle the data analysis.",
     "resultats": [],
-    "outils": ["Python", "Machine Learning"],
+    "outils": [
+      "Python",
+      "Machine Learning"
+    ],
     "statut": "en-cours",
-    "categories": ["data", "ia"],
-    "lien": { "url": "https://github.com/HOUDAED/World_Cup_Winner" },
-    "visuel": { "source": "To be decided", "phase": "09" },
+    "categories": [
+      "data",
+      "ia"
+    ],
+    "lien": {
+      "url": "https://github.com/HOUDAED/World_Cup_Winner"
+    },
+    "visuel": {
+      "source": "To be decided",
+      "phase": "09"
+    },
     "recit": {
       "contexte": "A year-long independent project, in a team of three, mixing data and AI. I love football, so the topic speaks to me.",
       "demarche": "Predict the 2030 World Cup winner by running many simulations, then see which team comes out on top most often.",
@@ -124,17 +184,30 @@
     "titre": "Héritage (YDays)",
     "vedette": false,
     "aUnePage": true,
-    "question": "",
+    "question": "How can families keep and share their stories?",
     "description": "A social app for sharing family stories.",
     "maPart": "Supporting the master's data and web dev students: front-end work, the PWA (installable app) which I coded, ideas for the database, the menu and the home page.",
     "resultats": [],
-    "outils": ["Next.js", "Spring Boot", "PostgreSQL", "Docker"],
+    "outils": [
+      "Next.js",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker"
+    ],
     "statut": "termine",
-    "categories": ["data", "dev-web"],
-    "lien": { "url": "https://github.com/STimour/Heritage_ydays" },
-    "visuel": { "source": "To be decided", "phase": "09" },
+    "categories": [
+      "data",
+      "dev-web"
+    ],
+    "lien": {
+      "url": "https://github.com/STimour/Heritage_ydays"
+    },
+    "visuel": {
+      "source": "To be decided",
+      "phase": "09"
+    },
     "recit": {
-      "contexte": "My first real professional project, in first year, supporting master's students in data and web development.",
+      "contexte": "My first real professional project, in my 1st year of Bachelor's, supporting master's students in data and web development.",
       "maPart": "I worked on the front end and coded the PWA myself, which makes the app installable. I also suggested ideas for the database, the menu and the home page.",
       "retenu": "I thought a project meant showing up and coding. I found out that before the first line, you think through every detail: the colour, the commercial angle, the image, the communication. I also understood how a site comes together, between the front end, the back end and the database. This project gave me the habits I'm using this year on HiraStream."
     }
@@ -145,17 +218,28 @@
     "titre": "Groupie Tracker “REK”",
     "vedette": false,
     "aUnePage": true,
-    "question": "",
+    "question": "How do you build a smooth multiplayer blind test in the browser?",
     "description": "A multiplayer browser game: music blind test and a word game (petit bac).",
     "maPart": "Team of 3. I built the game rooms, the blind test with the Spotify API, and the README.",
     "resultats": [],
-    "outils": ["Go", "Spotify API", "SQLite"],
+    "outils": [
+      "Go",
+      "Spotify API",
+      "SQLite"
+    ],
     "statut": "termine",
-    "categories": ["dev-web"],
-    "lien": { "url": "https://github.com/Lyon-Ynov-Campus/groupie-tracker-rek" },
-    "visuel": { "source": "To be decided", "phase": "09" },
+    "categories": [
+      "dev-web"
+    ],
+    "lien": {
+      "url": "https://github.com/Lyon-Ynov-Campus/groupie-tracker-rek"
+    },
+    "visuel": {
+      "source": "To be decided",
+      "phase": "09"
+    },
     "recit": {
-      "contexte": "A first-year group project with three of us: build a blind test and petit bac website.",
+      "contexte": "A group project from my 1st year of Bachelor's, with three of us: build a blind test and petit bac website.",
       "maPart": "I integrated the Spotify API and coded the blind test front end, along with the game rooms.",
       "retenu": "It was the first time I fetched and integrated an API. One of the two planned APIs didn't work: I had to adapt and switch to Spotify."
     }
@@ -166,17 +250,30 @@
     "titre": "Power4",
     "vedette": false,
     "aUnePage": true,
-    "question": "",
+    "question": "How do you teach a computer to play Connect Four, from random moves to thinking ahead?",
     "description": "Connect Four, playable by two people or against a bot.",
-    "maPart": "Solo, first-year project.",
-    "resultats": [],
-    "outils": ["Go", "HTML", "CSS"],
+    "maPart": "Solo project, 1st year of Bachelor's.",
+    "resultats": [
+      "Bot with 4 difficulty levels, 2 of them using minimax"
+    ],
+    "outils": [
+      "Go",
+      "HTML",
+      "CSS"
+    ],
     "statut": "termine",
-    "categories": ["dev-web"],
-    "lien": { "url": "https://github.com/krm3z/Power4" },
-    "visuel": { "source": "To be decided", "phase": "09" },
+    "categories": [
+      "dev-web"
+    ],
+    "lien": {
+      "url": "https://github.com/krm3z/Power4"
+    },
+    "visuel": {
+      "source": "To be decided",
+      "phase": "09"
+    },
     "recit": {
-      "contexte": "My first project of first year, at the start of the year. Until then, our games ran in the terminal.",
+      "contexte": "My first project of my 1st year of Bachelor's, at the start of the year. Until then, our games ran in the terminal.",
       "maPart": "On my own, I coded the game in Go, with its web interface and a bot with several difficulty levels.",
       "retenu": "It was the first time my code turned into a real website. Everyone knows Connect Four: I took care over the colours and followed the full brief. It's not my most important project, but it's the one where I saw my code take shape."
     }
@@ -193,9 +290,16 @@
     "resultats": [],
     "outils": [],
     "statut": "prochainement",
-    "categories": ["data"],
-    "lien": { "url": null },
-    "visuel": { "source": "None (“Coming soon” card)", "phase": "—" },
+    "categories": [
+      "data"
+    ],
+    "lien": {
+      "url": null
+    },
+    "visuel": {
+      "source": "None (“Coming soon” card)",
+      "phase": "—"
+    },
     "recit": {}
   }
 ]

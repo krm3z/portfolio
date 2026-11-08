@@ -1,0 +1,13 @@
+/* ----- 02 · Principes ----- */
+.principes { display: grid; gap: var(--space-48) var(--gouttiere); }
+@media (min-width: 640px) { .principes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .principes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.principe figure { display: grid; gap: var(--space-12); }
+.principe .k-vignette { box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.principe figcaption { display: grid; gap: var(--space-4); }
+.principe__titre { font-weight: var(--fw-moyen); }
+.k-badge circle { fill: var(--night); fill-opacity: 0.85; stroke: var(--snow); stroke-opacity: 0.5; }
+.k-badge path { fill: none; stroke: var(--snow); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.k-badge--non circle { stroke-opacity: 0.25; }
+.k-badge--non path { stroke: var(--mist); }
+.k-plat { fill: var(--gris-donnee); }

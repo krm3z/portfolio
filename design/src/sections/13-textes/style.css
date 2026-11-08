@@ -1,0 +1,5 @@
+/* ----- 13 · Textes ----- */
+.tableau--textes { min-width: 860px; }
+.tableau--textes td, .tableau--textes th { vertical-align: top; line-height: 1.55; }
+.tableau--textes tbody th { width: 24%; }
+.tableau--textes code { font-family: var(--font-mono); font-size: var(--fs-etiquette); word-break: break-word; }

@@ -1,0 +1,242 @@
+/*
+ * tokens.css · Portfolio de Kerem Uysal · phase 01 (direction artistique)
+ * Source unique des variables du site. Trois couches :
+ *   1. primitives : valeurs brutes (les noms de la section D de CLAUDE.md sont conservés) ;
+ *   2. sémantique : les rôles (fond, texte, accent…), nommés --color-* pour Tailwind v4 en phase 04 ;
+ *   3. composants : ne lisent que la couche 2, jamais une valeur hex.
+ * Règle de l'ambre : lumière (fenêtre, écran, lampe), chiffres clés, actions principales, éléments actifs.
+ * Jamais plus d'environ 5 % de la surface d'un écran.
+ * Points de rupture (pour mémoire, une variable CSS ne marche pas dans @media) : 768 px (12 colonnes), 1024 px (index latéral).
+ */
+
+/* ---------- 1. Primitives ---------- */
+:root {
+  /* Couleurs de la section D */
+  --night: #0E0F11;                     /* fond principal */
+  --night-2: #16171A;                   /* surfaces, cartes */
+  --night-3: #1E2024;                   /* survol des surfaces */
+  --line: rgba(237, 237, 234, 0.10);    /* bordures et séparateurs */
+  --mist: #9A9C9F;                      /* texte secondaire, brume */
+  --snow: #EDEDEA;                      /* texte principal, neige */
+  --amber: #F2A33A;                     /* seul accent */
+  --amber-soft: rgba(242, 163, 58, 0.15); /* fonds actifs */
+
+  /* Dérivés documentés (aucune nouvelle teinte) */
+  --gris-donnee: #66686C;               /* barres de graphique : 3,43:1 sur night (validé par le skill dataviz) */
+  --mist-25: rgba(154, 156, 159, 0.25); /* segments vides de l'indicateur de niveau */
+  --line-fort: rgba(237, 237, 234, 0.24); /* bordures en mode « contraste renforcé » */
+
+  /* Typographie */
+  --font-sans: "General Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
+  --fw-texte: 400;
+  --fw-moyen: 500;
+  --fw-titre: 600;
+  --fs-display: clamp(56px, 7vw, 120px);
+  --lh-display: 0.95;
+  --ls-display: -0.03em;
+  --fs-h1: clamp(40px, 4.4vw, 72px);
+  --lh-h1: 1;                            /* proposé : la DA ne le fixe pas */
+  --ls-h1: -0.02em;
+  --fs-h2: clamp(28px, 3vw, 44px);
+  --lh-h2: 1.1;                          /* proposé */
+  --ls-h2: -0.015em;                     /* proposé */
+  --fs-h3: clamp(20px, 18.5px + 0.38vw, 24px);
+  --lh-h3: 1.25;                         /* proposé */
+  --fs-texte: clamp(16px, 15.3px + 0.19vw, 18px);
+  --lh-texte: 1.6;
+  --fs-petit: 14px;
+  --lh-petit: 1.5;
+  --fs-etiquette: 12px;
+  --fs-etiquette-sm: 11px;
+  --ls-etiquette: 0.08em;
+  --ls-etiquette-large: 0.24em;
+  --mesure: 65ch;                        /* longueur de ligne maximale du texte courant */
+
+  /* Espacements */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-128: 128px;
+
+  /* Formes */
+  --radius-sm: 6px;
+  --radius-tuile: 12px;
+  --radius-pilule: 999px;
+  --trait: 1px;
+  --equerre: 12px;                       /* coins en équerre hérités de la référence B4 */
+
+  /* Lumière (réservée à l'ambre) et matière */
+  --lueur-ambre: 0 0 12px rgba(242, 163, 58, 0.45);
+  --lueur-ambre-filtre: drop-shadow(0 0 6px rgba(242, 163, 58, 0.55));
+  --grain-opacite: 0.04;
+
+  /* Empilement : une échelle fixe, jamais de valeur au hasard */
+  --z-scene: 0;
+  --z-contenu: 10;
+  --z-rail: 20;
+  --z-barre: 30;
+  --z-menu: 40;
+  --z-toast: 50;
+  --z-curseur: 60;
+  --z-grain: 70;
+  --z-evitement: 80;
+
+  /* Mouvement (le détail de chaque animation est dans motion.json) */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 200ms;
+  --dur-interface: 450ms;
+  --dur-apparition: 900ms;
+  --dur-masque-mots: 600ms;
+  --dur-cycle-mots: 2800ms;
+  --dur-pulse: 2000ms;
+  --dur-compteur: 1200ms;
+  --ecart-mots: 35ms;
+  --ecart-lignes: 90ms;
+  --ecart-cartes: 70ms;
+  --montee: 16px;
+  --flou-section: 8px;
+
+  /* Grille : 4 colonnes sur mobile, 12 à partir de 768 px (décision validée en phase 01) */
+  --colonnes: 4;
+  --gouttiere: 24px;
+  --marge: 24px;
+  --barre: 64px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --colonnes: 12;
+    --marge: clamp(32px, 4vw, 80px);
+  }
+}
+
+/* ---------- 2. Sémantique ---------- */
+:root {
+  --color-bg: var(--night);
+  --color-surface: var(--night-2);
+  --color-surface-hover: var(--night-3);
+  --color-border: var(--line);
+  --color-text: var(--snow);
+  --color-text-muted: var(--mist);
+  --color-accent: var(--amber);
+  --color-accent-bg: var(--amber-soft);
+  --color-on-accent: var(--night);
+  --color-data: var(--gris-donnee);
+  --color-data-accent: var(--amber);
+  --color-track: var(--mist-25);
+
+  /* Focus clavier : anneau ambre de 2 px, décalé de 3 px */
+  --focus-color: var(--amber);
+  --focus-width: 2px;
+  --focus-offset: 3px;
+  --focus-lisere: none; /* sur fond clair seulement, voir plus bas */
+}
+
+/* Surfaces claires (loader sur fond neige, début de l'entrée) :
+   texte en night (mist sur snow ne donne que 2,35:1) et liseré night de 1 px autour de l'anneau ambre. */
+[data-surface="clair"] {
+  --color-bg: var(--snow);
+  --color-text: var(--night);
+  --color-text-muted: var(--night);
+  --focus-lisere: 0 0 0 var(--focus-offset) var(--color-bg), 0 0 0 calc(var(--focus-offset) + var(--focus-width) + 1px) var(--night);
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: var(--line-fort);
+    --color-track: var(--mist);
+  }
+}
+
+/* Mouvement réduit : plus de déplacement, des fondus courts. Les boucles sont arrêtées dès le départ.
+   Le même bloc existe pour l'interrupteur de la page ([data-mouvement="reduit"]) : un test vérifie qu'ils sont identiques. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --montee: 0px;
+    --flou-section: 0px;
+    --ecart-mots: 0ms;
+    --ecart-lignes: 0ms;
+    --ecart-cartes: 0ms;
+    --dur-apparition: 300ms;
+    --dur-interface: 200ms;
+    --carte-montee: 0px;
+    --bouton-fleche: 0px;
+  }
+}
+
+[data-mouvement="reduit"] {
+  --montee: 0px;
+  --flou-section: 0px;
+  --ecart-mots: 0ms;
+  --ecart-lignes: 0ms;
+  --ecart-cartes: 0ms;
+  --dur-apparition: 300ms;
+  --dur-interface: 200ms;
+  --carte-montee: 0px;
+  --bouton-fleche: 0px;
+}
+
+/* ---------- 3. Composants ---------- */
+:root {
+  /* Bouton principal : pilule ambre, texte night en Geist Mono 12 px majuscules */
+  --bouton-fond: var(--color-accent);
+  --bouton-texte: var(--color-on-accent);
+  --bouton-marge-v: 12px;
+  --bouton-marge-h: 20px;
+  --bouton-fleche: 4px;                 /* la flèche glisse de 4 px au survol */
+  --bouton-pression: 0.96;              /* échelle à l'appui */
+
+  /* Bouton secondaire */
+  --bouton2-contour: var(--color-border);
+  --bouton2-contour-survol: var(--color-accent);
+  --bouton2-texte: var(--color-text);
+
+  /* Lien : soulignement qui se dessine de gauche à droite */
+  --lien-duree: var(--dur-interface);
+
+  /* Cartes */
+  --carte-fond: var(--color-surface);
+  --carte-fond-survol: var(--color-surface-hover);
+  --carte-contour: var(--color-border);
+  --carte-contour-survol: var(--color-accent);
+  --carte-montee: 4px;
+
+  /* Indicateur de niveau : 3 barres de 14 × 4 px espacées de 3 px */
+  --niveau-l: 14px;
+  --niveau-h: 4px;
+  --niveau-ecart: 3px;
+  --niveau-plein: var(--color-accent);
+  --niveau-vide: var(--color-track);
+
+  /* Tuile de stack */
+  --tuile: 72px;
+  --tuile-logo: 28px;
+
+  /* Filtre façon Power BI */
+  --filtre-fond: transparent;
+  --filtre-fond-actif: var(--color-accent-bg);
+  --filtre-barre: var(--color-data);
+  --filtre-barre-active: var(--color-accent);
+
+  /* Curseur personnalisé */
+  --curseur-point: 10px;
+  --curseur-anneau: 36px;
+
+  /* Graphiques (tout le site) */
+  --chart-barre: var(--color-data);
+  --chart-barre-accent: var(--color-data-accent);
+  --chart-barre-max: 24px;
+  --chart-rayon: 4px;
+  --chart-base: var(--trait);
+  --chart-base-couleur: var(--color-border);
+  --chart-valeur: var(--color-text);
+  --chart-libelle: var(--color-text-muted);
+}

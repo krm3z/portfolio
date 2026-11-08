@@ -1,0 +1,104 @@
+/* ----- 10 · Mouvement ----- */
+.courbes { display: grid; gap: var(--space-24) var(--gouttiere); }
+@media (min-width: 768px) { .courbes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.courbe { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: var(--space-16); align-items: start; padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); }
+.courbe__trace { width: 64px; height: 64px; }
+.courbe__trace path { fill: none; stroke: var(--snow); stroke-width: 1.5; stroke-linecap: round; }
+.courbe__trace .courbe__repere { stroke: var(--line-fort); stroke-width: 1; }
+.courbe__texte { display: grid; gap: var(--space-4); }
+.courbe__nom { font-weight: var(--fw-moyen); }
+
+.reglages { display: grid; gap: var(--space-32) var(--gouttiere); }
+@media (min-width: 768px) { .reglages { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.reglages__colonne { display: grid; gap: var(--space-12); align-content: start; }
+.reglages dl { display: grid; }
+.reglages dl > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px var(--space-12); padding-block: var(--space-12); border-bottom: var(--trait) solid var(--color-border); }
+.reglages dt { font-family: var(--font-mono); font-size: var(--fs-etiquette); }
+.reglages dd.chiffre { text-align: right; }
+.reglages__note { grid-column: 1 / -1; }
+.regles-mouvement { display: grid; gap: var(--space-8); margin-top: var(--space-32); max-width: 68ch; padding-left: var(--space-24); border-left: var(--trait) solid var(--line-fort); }
+.regles-mouvement li { font-size: var(--fs-petit); line-height: var(--lh-petit); }
+
+/* Démos */
+.demos { display: grid; gap: var(--space-64) var(--gouttiere); }
+@media (min-width: 1024px) { .demos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.demo { display: grid; gap: var(--space-16); align-content: start; min-width: 0; }
+.demo__tete { display: grid; gap: var(--space-4); }
+.demo__titre { display: flex; align-items: baseline; gap: var(--space-12); font-size: var(--fs-h3); font-weight: var(--fw-moyen); line-height: 1.2; }
+.demo__lettre { font-size: var(--fs-petit); color: var(--color-text-muted); }
+.demo__scene {
+  position: relative; display: grid; place-items: center; height: 340px; padding: var(--space-24);
+  border-radius: var(--radius-tuile); background: var(--color-surface); overflow: hidden;
+}
+.demo__valeurs { font-family: var(--font-mono); font-size: var(--fs-etiquette); letter-spacing: 0.02em; }
+.demo__commandes { display: flex; flex-wrap: wrap; gap: var(--space-8); }
+.demo__rejouer { display: inline-flex; align-items: center; gap: var(--space-8); }
+/* Avant la première lecture, les éléments qui vont entrer restent cachés (jamais en mode capture). */
+.demo--attente .demo-mots__mot, .demo--attente .demo-masque__mot, .demo--attente .demo-flou__bloc { opacity: 0; }
+.sans-transition, .sans-transition * { transition: none !important; }
+
+/* a · mots */
+.demo-mots { max-width: 22ch; font-size: var(--fs-h2); line-height: 1.2; letter-spacing: -0.01em; text-wrap: balance; }
+.demo-mots__mot { display: inline-block; }
+/* b · masque */
+.demo-masque { font-size: var(--fs-h1); font-weight: var(--fw-moyen); line-height: 1; letter-spacing: -0.02em; }
+.demo-masque__ligne { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; }
+.demo-masque__mot { display: inline-block; }
+/* c · compteur : la largeur est réservée sur la valeur finale (le fantôme), le chiffre animé se pose dessus */
+.demo-compteur { display: grid; justify-items: center; gap: var(--space-8); text-align: center; }
+.demo-compteur__valeur { display: grid; font-size: clamp(48px, 5vw, 72px); line-height: 1; letter-spacing: -0.02em; }
+.demo-compteur__valeur > * { grid-area: 1 / 1; text-align: right; }
+.demo-compteur__fantome { visibility: hidden; }
+.demo-compteur__libelle { color: var(--color-text-muted); }
+/* d · survol */
+.demo-survol { width: min(100%, 300px); }
+.demo-survol .carte-projet { padding: var(--space-16); gap: var(--space-12); }
+.demo-survol .carte-projet__numero { font-size: 28px; }
+.demo-survol .carte-projet__question, .demo-survol .carte-projet__outils, .demo-survol .carte-projet__chiffre { display: none; }
+.demo-survol .carte-projet__visuel { aspect-ratio: 16 / 9; }
+@media (hover: hover) and (pointer: fine) {
+  .demo-survol .carte-projet:hover { transform: translateY(calc(-1 * var(--carte-montee))); border-color: var(--carte-contour-survol); }
+  .demo-survol .carte-projet:hover .carte-projet__couleur { opacity: 1; }
+}
+.demo--reduit .demo-survol .carte-projet { transition: border-color var(--dur-micro) var(--ease-out-expo); }
+.demo--reduit .demo-survol .carte-projet.est-survol, .demo--reduit .demo-survol .carte-projet:hover { transform: none; }
+.demo--reduit .demo-survol .carte-projet__couleur { transition-duration: var(--dur-micro); }
+/* e · accordéon */
+.demo-accordeon { width: 100%; display: grid; justify-items: center; }
+.demo--reduit .carte-competence__corps, .demo--reduit .carte-competence__plus { transition-duration: 0s; }
+.demo--reduit .carte-competence__interieur { transition-duration: var(--dur-micro); }
+/* f · changement de chapitre */
+.demo-flou__bloc { display: grid; gap: var(--space-8); text-align: center; }
+/* g · mots alternés */
+.demo-alternes { display: grid; justify-items: center; gap: var(--space-12); text-align: center; }
+.demo-alternes__avant { color: var(--color-text-muted); }
+.demo-alternes__fenetre { display: grid; overflow: hidden; font-size: clamp(36px, 4.4vw, 64px); font-weight: var(--fw-moyen); line-height: 1.1; letter-spacing: -0.02em; }
+.demo-alternes__mot { grid-area: 1 / 1; text-align: center; }
+/* h · timeline pilotée par son propre défilement */
+.demo[data-anim="h"] .demo__scene { padding: 0; place-items: stretch; }
+.demo-timeline__defilement { height: 100%; overflow-y: auto; overscroll-behavior: contain; position: relative; }
+/* L'anneau d'un cadre qui défile serait recouvert par son contenu : on le pose sur la scène qui l'entoure. */
+.demo-timeline__defilement:focus-visible { outline: none; }
+.demo__scene:has(.demo-timeline__defilement:focus-visible) { outline: var(--focus-width) solid var(--focus-color); outline-offset: var(--focus-offset); }
+.demo-timeline__liste { position: relative; padding: 170px var(--space-24) 170px calc(var(--space-24) + 28px); /* une demi-hauteur de cadre : le point part de la première ligne */ }
+.demo-timeline__rail { position: absolute; top: 170px; bottom: 170px; left: calc(var(--space-24) + 8px); width: var(--trait); background: var(--line-fort); }
+.demo-timeline__point {
+  position: absolute; top: 170px; left: calc(var(--space-24) + 8px); width: 9px; height: 9px; margin: -4px 0 0 -4px; border-radius: 50%;
+  background: var(--amber); box-shadow: 0 0 12px var(--lueur-ambre);
+}
+.demo-timeline__liste ol { display: grid; gap: var(--space-24); }
+/* Avant le passage du point : mist, toujours lisible (6,5:1). Au passage : snow. */
+.demo-timeline__ligne { display: grid; gap: 2px; color: var(--color-text-muted); transition: color var(--dur-micro) var(--ease-out-expo); }
+.demo-timeline__ligne .etiquette { color: inherit; }
+.demo-timeline__ligne.est-passee { color: var(--color-text); }
+.demo-timeline__ligne--objectif .demo-timeline__titre { color: var(--amber); }
+.demo-timeline__titre { font-size: var(--fs-petit); }
+.demo--reduit .demo-timeline__ligne { color: var(--color-text); }
+
+/* Ce qui ne bouge pas */
+.immobile { display: grid; gap: var(--space-24) var(--gouttiere); }
+@media (min-width: 768px) { .immobile { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
+.immobile > div { display: grid; gap: var(--space-8); align-content: start; padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); }
+.immobile dt { font-weight: var(--fw-moyen); }
+.tableau--mouvement { min-width: 860px; }
+.tableau--mouvement td { vertical-align: top; }

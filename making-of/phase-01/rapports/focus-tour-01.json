@@ -1,0 +1,112 @@
+[
+  {
+    "format": "1440",
+    "focalisables": 76,
+    "atteints": 76,
+    "ordre": {
+      "memeSuiteQueLeDom": true,
+      "retoursOk": true
+    },
+    "ecartsDeStyle": [],
+    "problemes": [],
+    "contrasteMin": 8.35,
+    "actions": [
+      {
+        "nom": "Lien d’évitement → contenu",
+        "ok": true,
+        "detail": "premier : evitement, puis : contenu"
+      },
+      {
+        "nom": "Accordéon : Entrée ouvre et ferme",
+        "ok": true,
+        "detail": "true puis false"
+      },
+      {
+        "nom": "Filtre : Espace change l’état",
+        "ok": true,
+        "detail": "true"
+      },
+      {
+        "nom": "Copie de l’email annoncée",
+        "ok": true,
+        "detail": "Email copié"
+      },
+      {
+        "nom": "Son : le libellé change",
+        "ok": true,
+        "detail": "Activer le son → Couper le son"
+      },
+      {
+        "nom": "Pause : l’état change",
+        "ok": true,
+        "detail": "true → false"
+      },
+      {
+        "nom": "Rejouer (démo a) lance des animations",
+        "ok": true,
+        "detail": "12 animations"
+      },
+      {
+        "nom": "Interrupteur « Mouvement réduit » (démo f)",
+        "ok": true,
+        "detail": "false → true"
+      }
+    ],
+    "erreurs": []
+  },
+  {
+    "format": "390",
+    "focalisables": 55,
+    "atteints": 55,
+    "ordre": {
+      "memeSuiteQueLeDom": true,
+      "retoursOk": true
+    },
+    "ecartsDeStyle": [],
+    "problemes": [],
+    "contrasteMin": 7.9,
+    "actions": [
+      {
+        "nom": "Lien d’évitement → contenu",
+        "ok": true,
+        "detail": "premier : evitement, puis : contenu"
+      },
+      {
+        "nom": "Accordéon : Entrée ouvre et ferme",
+        "ok": true,
+        "detail": "true puis false"
+      },
+      {
+        "nom": "Filtre : Espace change l’état",
+        "ok": true,
+        "detail": "true"
+      },
+      {
+        "nom": "Copie de l’email annoncée",
+        "ok": true,
+        "detail": "sans objet à cette largeur : l’adresse est dans le menu"
+      },
+      {
+        "nom": "Son : le libellé change",
+        "ok": true,
+        "detail": "Activer le son → Couper le son"
+      },
+      {
+        "nom": "Pause : l’état change",
+        "ok": true,
+        "detail": "true → false"
+      },
+      {
+        "nom": "Rejouer (démo a) lance des animations",
+        "ok": true,
+        "detail": "12 animations"
+      },
+      {
+        "nom": "Interrupteur « Mouvement réduit » (démo f)",
+        "ok": true,
+        "detail": "false → true"
+      }
+    ],
+    "erreurs": []
+  }
+]

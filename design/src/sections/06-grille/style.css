@@ -1,0 +1,33 @@
+/* ----- 06 · Grille et espacements ----- */
+.grilles { display: grid; gap: var(--space-48) var(--gouttiere); align-items: end; }
+@media (min-width: 1024px) { .grilles { grid-template-columns: minmax(0, 7.5fr) minmax(0, 2.5fr); } }
+.grille-demo__svg { width: 100%; height: auto; border-radius: var(--radius-sm); box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.grille-demo--mobile .grille-demo__svg { max-width: 260px; }
+.grille-demo__fond { fill: var(--night-2); }
+.grille-demo__barre { fill: var(--night); }
+.grille-demo__col { fill: var(--snow); fill-opacity: 0.05; stroke: var(--snow); stroke-opacity: 0.22; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.grille-demo__marge { fill: var(--snow); fill-opacity: 0.025; }
+.grille-demo__mono { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; fill: var(--mist); }
+.grille-demo__texte { font-family: var(--font-sans); font-size: 22px; fill: var(--mist); }
+.grille-demo__geant { font-family: var(--font-sans); font-size: 104px; font-weight: 500; letter-spacing: -0.03em; fill: var(--snow); }
+.grille-demo__geant--ambre { fill: var(--amber); font-size: 72px; }
+.grille-demo--mobile .grille-demo__geant { font-size: 58px; }
+.grille-demo--mobile .grille-demo__mono { font-size: 11px; }
+.grille-demo--mobile .grille-demo__geant--moyen { font-size: 38px; }
+.grille-demo__avatar { fill: var(--night-3); stroke: var(--snow); stroke-opacity: 0.3; vector-effect: non-scaling-stroke; }
+.grille-demo__ligne { fill: var(--mist); fill-opacity: 0.35; }
+.grille-demo__rail { fill: none; stroke: var(--mist); stroke-opacity: 0.5; vector-effect: non-scaling-stroke; }
+
+.espacements { display: grid; gap: var(--space-12); }
+.espacements li { display: grid; grid-template-columns: 4ch minmax(0, 128px) auto; align-items: center; gap: var(--space-16); font-size: var(--fs-petit); }
+.espacements__barre { display: block; height: 12px; background: var(--snow); border-radius: 2px; }
+
+.formes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-32) var(--gouttiere); }
+@media (min-width: 768px) { .formes { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.formes li { display: grid; gap: var(--space-8); align-content: start; font-size: var(--fs-petit); }
+.forme { display: block; height: 72px; margin-bottom: var(--space-8); background: var(--night-2); box-shadow: inset 0 0 0 var(--trait) var(--line-fort); }
+.forme--petit { border-radius: var(--radius-sm); }
+.forme--tuile { border-radius: var(--radius-tuile); width: 72px; }
+.forme--pilule { border-radius: var(--radius-pilule); height: 44px; margin-block: 14px 22px; }
+.forme--trait { height: 0; box-shadow: none; border-top: var(--trait) solid var(--line); margin-block: 36px 44px; background: none; }
+.forme--equerres { background: none; box-shadow: none; }

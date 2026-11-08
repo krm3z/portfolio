@@ -1,0 +1,190 @@
+[
+  {
+    "fichier": "design/src/vendor/geist-mono.css",
+    "source": "https://cdn.jsdelivr.net/npm/geist@1.9.2/dist/fonts/geist-mono",
+    "version": "geist@1.9.2",
+    "licence": "SIL Open Font License 1.1 (Vercel)",
+    "sha256": "6ba043a4c40f0babdf19a65671cc04e8ebb1af952c2b54d69b4c4011e050c4e4"
+  },
+  {
+    "fichier": "design/src/vendor/general-sans.css",
+    "source": "https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap",
+    "licence": "ITF Free Font License (Fontshare) : polices servies par Fontshare, aucun fichier de police dans le dépôt",
+    "sha256": "4258e63c5af5f723eeabb8ab911f776000e8b7634d43757f5d494e1f2d94b8d7"
+  },
+  {
+    "fichier": "design/src/vendor/icons/arrow-right.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/arrow-right.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "72c4d6508ca4829271b3c1ab8bf38ca6c783de42bf73b098e1bf5cafbefd365b"
+  },
+  {
+    "fichier": "design/src/vendor/icons/arrow-up-right.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/arrow-up-right.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "1c647ffb1298c179ea1461bee9712a454c3394a6bcdfe0ac587e407b66dbce2b"
+  },
+  {
+    "fichier": "design/src/vendor/icons/bot.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/bot.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "209e6fd51b785f01fd8ceeb9919225f38c4c7f934d168239cebd5cb13af426f8"
+  },
+  {
+    "fichier": "design/src/vendor/icons/chart-column.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/chart-column.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "9d8e42177ae465d03b4f58a3b01163dd5e7599f0f503f770f7e43038884af66e"
+  },
+  {
+    "fichier": "design/src/vendor/icons/check.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/check.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "a0adbb843813a89f6f509155bb710a47de44c39e73f984e23cd89d3392828eaf"
+  },
+  {
+    "fichier": "design/src/vendor/icons/chevron-down.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/chevron-down.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "ff32eb8d7f31b0e773f7618deaf4e212ac8cbb5c480b110a72823e975ccb86db"
+  },
+  {
+    "fichier": "design/src/vendor/icons/copy.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/copy.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "865d4712a410fef237c2fbbeda4b4efcad30f98f22bac6d7a1b4d35daf82019b"
+  },
+  {
+    "fichier": "design/src/vendor/icons/database.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/database.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "9e790fb8577919f2fe0e0899fe589e5a0793f4541eb3066bf2dc962a5f26e48b"
+  },
+  {
+    "fichier": "design/src/vendor/icons/github.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/icons/github.svg",
+    "version": "lucide-static@0.460.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "844db86ed0f05ecd9bf62a25974059c5422520643ef4497fb88032e4bb02ea3b"
+  },
+  {
+    "fichier": "design/src/vendor/icons/grid-3x3.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/grid-3x3.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "4320a023d0341d2b3cd1eb59ac349b7e7fab83f9b5dca393c39b31917c39291a"
+  },
+  {
+    "fichier": "design/src/vendor/icons/linkedin.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@0.460.0/icons/linkedin.svg",
+    "version": "lucide-static@0.460.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "f52b1fb24641d0fe534f4be62a83341ff87362d6026ffb7744687f5bed0c47b7"
+  },
+  {
+    "fichier": "design/src/vendor/icons/logo-git.svg",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@16.36.0/icons/git.svg",
+    "version": "simple-icons@16.36.0",
+    "licence": "CC0-1.0 (Simple Icons) ; marques déposées de leurs propriétaires",
+    "sha256": "95724d436215d483de82288610c3c144854138f49945424697fcdf8be66e17d6"
+  },
+  {
+    "fichier": "design/src/vendor/icons/logo-python.svg",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@16.36.0/icons/python.svg",
+    "version": "simple-icons@16.36.0",
+    "licence": "CC0-1.0 (Simple Icons) ; marques déposées de leurs propriétaires",
+    "sha256": "ad9468e1c4903f73ae7eebfbe980f0f727a10db695be3d914e7d8bd25356a862"
+  },
+  {
+    "fichier": "design/src/vendor/icons/mail.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/mail.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "b399d35c76389da60c3746cf08dc211a1a2ce6316a55334349ae8da21faa2276"
+  },
+  {
+    "fichier": "design/src/vendor/icons/menu.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/menu.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "55dcb65de54eb5cbef3aaebfcceeb2c7273019529311107e58ab803a57b2b904"
+  },
+  {
+    "fichier": "design/src/vendor/icons/pause.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/pause.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "e6f380c5ccee8102f8f192e9a1019aa6c9c573ba93b0fe8958db9646004dcb98"
+  },
+  {
+    "fichier": "design/src/vendor/icons/play.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/play.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "a27e30c3d087faa7c489174a78387fa3708ff30d89c653f1cdd7d3cd104ba499"
+  },
+  {
+    "fichier": "design/src/vendor/icons/plus.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/plus.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "6785279aad64300db83832507ef7909f5c4470334add79dcc0fa5b74564fd08e"
+  },
+  {
+    "fichier": "design/src/vendor/icons/rotate-ccw.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/rotate-ccw.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "7f3ba698d96e1d685aae743da04dd528c225232cc0775f20f2423f4380f04fe4"
+  },
+  {
+    "fichier": "design/src/vendor/icons/sheet.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/sheet.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "c57ba227b4eb574ec80632adf37da217de05ecd1b091be94652b5e91d4047429"
+  },
+  {
+    "fichier": "design/src/vendor/icons/volume-2.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/volume-2.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "37d9e8480a53787f37ab89a0be22b758b853e1ee8fefb679bb6f23e2f1319b9a"
+  },
+  {
+    "fichier": "design/src/vendor/icons/volume-x.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/volume-x.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "e27f1f39fbfbaebf01af0a7c2df8b19776340e1c1a21b11e449ed52eb6474307"
+  },
+  {
+    "fichier": "design/src/vendor/icons/workflow.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/workflow.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "a2ad62b4b6826071b4ddad09ce3660ffb883d1bc1a5e81199dcd6f3b826c1234"
+  },
+  {
+    "fichier": "design/src/vendor/icons/x.svg",
+    "source": "https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/x.svg",
+    "version": "lucide-static@1.70.0",
+    "licence": "ISC (Lucide)",
+    "sha256": "4fcd3eb7104ef5e1ae949ebc9f316b72e3839bd790766d9795ee5f8d1eace91e"
+  },
+  {
+    "fichier": "design/src/vendor/nasa-missions.webp",
+    "source": "github.com/krm3z/nasa-data-pipeline, docs/missions.png (réduit en WebP)",
+    "licence": "Projet de Kerem Uysal",
+    "dimensions": "958 × 796 (origine 958 × 796)",
+    "sha256": "4d17a2748ef6f727f47821a30fea9bea888b7a8d627df473b0b1095b8c6dfc24"
+  }
+]

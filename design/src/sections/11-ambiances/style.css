@@ -1,0 +1,44 @@
+/* ----- 11 · Ambiances ----- */
+.bible { display: grid; gap: var(--space-24) var(--gouttiere); }
+@media (min-width: 768px) { .bible { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } }
+.bible > div { display: grid; gap: var(--space-8); align-content: start; padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); }
+.bible dd { font-size: var(--fs-petit); line-height: var(--lh-petit); color: var(--color-text-muted); }
+
+.ambiances { display: grid; gap: var(--space-96); }
+.ambiance { display: grid; gap: var(--space-24); }
+.ambiance__image {
+  position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: var(--radius-sm); box-shadow: inset 0 0 0 var(--trait) var(--line);
+}
+.ambiance__image > .k-paysage { width: 100%; height: 100%; }
+.ambiance__neige { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.ambiance__legende { display: grid; gap: var(--space-8); }
+@media (min-width: 1024px) {
+  .ambiance__legende { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); column-gap: var(--gouttiere); align-items: baseline; }
+  .ambiance__mesure { grid-column: 2; }
+}
+.ambiance__nom { display: flex; align-items: baseline; gap: var(--space-12); font-size: var(--fs-h3); font-weight: var(--fw-moyen); line-height: 1.2; }
+.ambiance__num { font-size: var(--fs-petit); color: var(--color-text-muted); }
+.ambiance__intention { max-width: 52ch; }
+.ambiance__mesure { color: var(--color-text-muted); line-height: 1.7; }
+.ambiance__ratio--faible { color: var(--color-text); }
+
+.tableau--ambiances { min-width: 980px; }
+.tableau--ambiances tbody th { width: 210px; color: var(--color-text-muted); }
+.tableau--ambiances td { vertical-align: top; line-height: 1.7; }
+.tableau--ambiances .ambiance__ratio { white-space: nowrap; }
+.nuance-mini { display: inline-flex; align-items: center; gap: 6px; margin-right: var(--space-8); white-space: nowrap; }
+.nuance-mini__pastille { width: 12px; height: 12px; border-radius: 3px; box-shadow: inset 0 0 0 var(--trait) var(--line-fort); }
+
+/* Vue d'export (?export=<id>) : l'image seule, en 1200 × 675, pour les PNG du making-of. */
+html.export, html.export body { overflow: hidden; }
+html.export body * { visibility: hidden; }
+html.export .ambiance--export .ambiance__image, html.export .ambiance--export .ambiance__image * { visibility: visible; }
+html.export .ambiance--export .ambiance__image { position: fixed; inset: 0 auto auto 0; z-index: 1000; width: 1200px; height: 675px; border-radius: 0; box-shadow: none; }
+html.export-sans-ui .k-ui { display: none; }
+
+.recommandation { display: grid; gap: var(--space-12); max-width: 68ch; padding-left: var(--space-24); border-left: var(--trait) solid var(--line-fort); counter-reset: reco; }
+.recommandation li { counter-increment: reco; display: grid; grid-template-columns: 2.5ch minmax(0, 1fr); gap: var(--space-8); font-size: var(--fs-texte); line-height: var(--lh-texte); }
+.recommandation li::before { content: counter(reco); font-family: var(--font-mono); font-size: var(--fs-petit); color: var(--color-text-muted); padding-top: 0.25em; }
+.ambiance__statut { display: inline-flex; align-items: center; min-height: 22px; margin-left: var(--space-12); padding: 0 var(--space-8); border: var(--trait) solid var(--line-fort); border-radius: var(--radius-pilule); font-family: var(--font-mono); font-size: var(--fs-etiquette-sm); font-weight: var(--fw-texte); letter-spacing: var(--ls-etiquette); text-transform: uppercase; color: var(--color-text-muted); vertical-align: middle; }
+.ambiance__statut--retenue { border-color: var(--snow); color: var(--color-text); }

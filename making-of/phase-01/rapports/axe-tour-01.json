@@ -1,0 +1,22 @@
+[
+  {
+    "format": "1440",
+    "violations": [],
+    "incomplets": [
+      {
+        "id": "color-contrast",
+        "noeuds": 159
+      }
+    ]
+  },
+  {
+    "format": "390",
+    "violations": [],
+    "incomplets": [
+      {
+        "id": "color-contrast",
+        "noeuds": 322
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+/* ----- 08 · Dataviz ----- */
+.graphique { display: grid; gap: var(--space-48); }
+.graphique__tete { display: grid; gap: var(--space-12); max-width: 60ch; }
+.graphique__titre { text-wrap: balance; }
+.graphique__barres {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end;
+  height: 300px; padding-top: var(--space-32);
+  border-bottom: var(--chart-base) solid var(--line-fort); /* la seule ligne de base */
+}
+.graphique__colonne { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+/* La hauteur de la barre est exactement proportionnelle à la valeur : l'étiquette est posée au-dessus, hors du calcul. */
+.graphique__cible {
+  position: relative; display: flex; justify-content: center;
+  width: 100%; height: calc(var(--part) * 100%); cursor: default; border-radius: var(--radius-sm);
+}
+.graphique__valeur { position: absolute; bottom: calc(100% + var(--space-8)); font-size: var(--fs-petit); color: var(--chart-libelle); line-height: 1; }
+.graphique__barre {
+  display: block; height: 100%; width: min(var(--chart-barre-max), 60%);
+  background: var(--chart-barre); border-radius: var(--chart-rayon) var(--chart-rayon) 0 0;
+}
+.graphique__colonne--fait .graphique__barre { background: var(--chart-barre-accent); }
+.graphique__colonne--fait .graphique__valeur { color: var(--chart-valeur); font-weight: var(--fw-moyen); }
+.graphique__etiquette {
+  position: absolute; top: calc(100% + var(--space-12)); display: grid; justify-items: center; gap: 2px;
+  font-family: var(--font-mono); font-size: var(--fs-etiquette-sm); letter-spacing: 0.04em; color: var(--chart-libelle); white-space: nowrap;
+}
+.graphique__colonne--fait .graphique__etiquette { color: var(--color-text); }
+.graphique__info {
+  position: absolute; bottom: calc(var(--part) * 100% + var(--space-32)); left: 50%; z-index: var(--z-menu);
+  width: max-content; max-width: 240px; padding: var(--space-8) var(--space-12); border-radius: var(--radius-sm);
+  background: var(--night-3); box-shadow: inset 0 0 0 var(--trait) var(--line-fort);
+  font-size: var(--fs-petit); line-height: var(--lh-petit); color: var(--color-text);
+  transform: translateX(-50%); opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity var(--dur-micro) var(--ease-out-expo), visibility var(--dur-micro);
+}
+.graphique__colonne:nth-child(-n + 2) .graphique__info { left: 0; transform: none; }
+.graphique__colonne:nth-last-child(-n + 2) .graphique__info { left: auto; right: 0; transform: none; }
+.graphique__cible:focus-visible + .graphique__etiquette + .graphique__info { opacity: 1; visibility: visible; }
+@media (hover: hover) and (pointer: fine) {
+  .graphique__colonne:hover .graphique__info { opacity: 1; visibility: visible; }
+  .graphique__barres:hover .graphique__colonne:not(:hover) .graphique__barre { opacity: 0.55; }
+}
+.graphique + .donnees { margin-top: var(--space-64); }
+.donnees { margin-top: var(--space-64); }
+.donnees__resume { cursor: pointer; list-style: none; font-size: var(--fs-petit); }
+.donnees__resume::-webkit-details-marker { display: none; }
+.donnees[open] .donnees__resume { margin-bottom: var(--space-16); }
+
+.regles-graphiques { display: grid; gap: var(--space-24) var(--gouttiere); }
+@media (min-width: 768px) { .regles-graphiques { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.regles-graphiques li { display: grid; gap: var(--space-8); align-content: start; padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); }
+.regles-graphiques__titre { font-weight: var(--fw-moyen); }

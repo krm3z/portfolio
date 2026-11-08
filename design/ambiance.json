@@ -1,0 +1,245 @@
+{
+  "version": "1.0.0",
+  "description": "Lumière de la scène 3D : l'état « jour » du début de l'entrée, les trois ambiances étudiées en phase 01 et l'ambiance retenue par Kerem (choisi). Les candidates restent en archive ; l'heure bleue sert d'étape intermédiaire pendant la tombée de la nuit.",
+  "conventions": {
+    "couleurs": "hex sRGB",
+    "distances": "mètres ; 1 unité three.js = 1 m (à confirmer en phase 03)",
+    "brouillard": "FogExp2 : part de brouillard = 1 − exp(−(densité × distance)²) ; visibilite95 = 1,7308 / densité",
+    "saturationMax": "8 % en HSL pour les gris de la scène (ciel, brouillard, neige, roche, couleurs des lumières froides)",
+    "albedo": "couleur de base d'une matière sous une lumière neutre d'intensité 1 et une exposition de 1 ; le bois (désaturé) est le même dans tous les états",
+    "lumieres": "ambiante, hémisphère et directionnelle = multiplicateurs sans unité ; lampe intérieure en candela ; lueur de fenêtre sur la neige en nits (RectAreaLight)",
+    "post": "noms génériques ; correspondance avec @react-three/postprocessing : bloom = <Bloom intensity luminanceThreshold mipmapBlur>, grain = <Noise opacity>, vignette = <Vignette offset darkness>, aberration = <ChromaticAberration offset> (transitions seulement)",
+    "interface": "micro-texte posé sur la 3D en Geist Mono 500, 12 px ; couleur par zone (haut = sur le ciel, bas = sur la neige du premier plan) ; voileBas = opacité d'un voile noir en dégradé sur les 22 % du bas de l'image, sous le micro-texte du bas ; contrasteMin = contraste le plus faible sous le micro-texte, calculé avec les formules de la scène (brouillard, vignettage, voile) et arrondi en dessous ; scripts/da-ambiances.mjs mesure aussi le contraste rendu (pixels réellement dessinés)",
+    "apercu2D": "les illustrations de la page DA reprennent la formule du brouillard et ces valeurs ; l'éclairage y est simplifié (albédo × ambiante × exposition) : à recaler dans la vraie scène en phase 05"
+  },
+  "plans": [
+    { "nom": "cabane et premier plan", "distance": 12 },
+    { "nom": "crête proche", "distance": 30 },
+    { "nom": "massif", "distance": 55 },
+    { "nom": "chaîne lointaine", "distance": 85 },
+    { "nom": "horizon", "distance": 120 }
+  ],
+  "jour": {
+    "nom": "Jour (début de l'entrée)",
+    "intention": "brume très claire, presque blanche, un peu plus sombre sur les bords : seuls les points de données sont visibles (référence A1)",
+    "ciel": { "haut": "#D6D9DB", "horizon": "#E7E9EA" },
+    "brouillard": { "couleur": "#E3E5E6", "densite": 0.062, "visibilite95": 27.9 },
+    "bandesBrume": [],
+    "neige": { "albedo": "#F1F2F1" },
+    "roche": { "albedo": "#A2A6AA" },
+    "bois": { "albedo": "#57534E" },
+    "lumieres": {
+      "ambiante": { "couleur": "#FFFFFF", "intensite": 1.1 },
+      "hemisphere": { "ciel": "#E8EAEB", "sol": "#CFD2D4", "intensite": 0.8 },
+      "directionnelle": { "couleur": "#FFFFFF", "intensite": 0.6, "role": "lumière diffuse d'un ciel couvert" },
+      "interieure": { "couleur": "#F2A33A", "intensite": 0, "unite": "candela" }
+    },
+    "fenetre": { "emissif": "#F2A33A", "intensiteEmissive": 0, "lueurNits": 0 },
+    "exposition": 1.05,
+    "toneMapping": "AgX",
+    "post": {
+      "bloom": { "intensite": 0, "seuil": 0.9, "rayon": 0.6 },
+      "grain": 0.04,
+      "vignette": { "decalage": 0.35, "obscurite": 0.18 },
+      "profondeurDeChamp": { "distanceMiseAuPoint": 10, "flou": 0.5 },
+      "aberration": 0
+    },
+    "interface": { "texte": { "haut": "night", "bas": "night" }, "voileBas": 0, "contrasteMin": 13 }
+  },
+  "candidates": {
+    "brume-claire": {
+      "nom": "Brume claire",
+      "intention": "la plus lumineuse, proche de la référence A : brume dense et claire, fenêtre ambre douce",
+      "ciel": { "haut": "#B9BCBE", "horizon": "#8E9296" },
+      "brouillard": { "couleur": "#9DA1A4", "densite": 0.024, "visibilite95": 72.1 },
+      "bandesBrume": [
+        { "hauteur": 0.56, "epaisseur": 0.1, "opacite": 0.55 },
+        { "hauteur": 0.7, "epaisseur": 0.08, "opacite": 0.45 }
+      ],
+      "neige": { "albedo": "#D7DADC" },
+      "roche": { "albedo": "#6E7276" },
+      "bois": { "albedo": "#57534E" },
+      "lumieres": {
+        "ambiante": { "couleur": "#FFFFFF", "intensite": 1.0 },
+        "hemisphere": { "ciel": "#C8CBCE", "sol": "#A2A6AA", "intensite": 0.7 },
+        "directionnelle": { "couleur": "#FFFFFF", "intensite": 0.7, "role": "ciel couvert, ombres très douces" },
+        "interieure": { "couleur": "#F2A33A", "intensite": 60, "unite": "candela" }
+      },
+      "fenetre": { "emissif": "#F2A33A", "intensiteEmissive": 1.6, "lueurNits": 2 },
+      "exposition": 1.0,
+      "toneMapping": "AgX",
+      "post": {
+        "bloom": { "intensite": 0.5, "seuil": 0.9, "rayon": 0.6 },
+        "grain": 0.04,
+        "vignette": { "decalage": 0.3, "obscurite": 0.25 },
+        "profondeurDeChamp": { "distanceMiseAuPoint": 12, "flou": 1 },
+        "aberration": 0
+      },
+      "interface": { "texte": { "haut": "night", "bas": "night" }, "voileBas": 0, "contrasteMin": 8.6 }
+    },
+    "heure-bleue": {
+      "nom": "Heure bleue",
+      "intention": "équilibrée : ciel sombre en haut, horizon gris-bleu, brume moyenne, fenêtre ambre franche",
+      "ciel": { "haut": "#3C4146", "horizon": "#7C8288" },
+      "brouillard": { "couleur": "#737980", "densite": 0.018, "visibilite95": 96.2 },
+      "bandesBrume": [
+        { "hauteur": 0.62, "epaisseur": 0.08, "opacite": 0.35 }
+      ],
+      "neige": { "albedo": "#A7ABAF" },
+      "roche": { "albedo": "#474B50" },
+      "bois": { "albedo": "#57534E" },
+      "lumieres": {
+        "ambiante": { "couleur": "#FFFFFF", "intensite": 0.9 },
+        "hemisphere": { "ciel": "#8B939A", "sol": "#8F9397", "intensite": 0.6 },
+        "directionnelle": { "couleur": "#C8CBCE", "intensite": 0.8, "role": "lumière froide du ciel, en contre-jour" },
+        "interieure": { "couleur": "#F2A33A", "intensite": 120, "unite": "candela" }
+      },
+      "fenetre": { "emissif": "#F2A33A", "intensiteEmissive": 3, "lueurNits": 6 },
+      "exposition": 0.95,
+      "toneMapping": "AgX",
+      "post": {
+        "bloom": { "intensite": 0.9, "seuil": 0.9, "rayon": 0.6 },
+        "grain": 0.04,
+        "vignette": { "decalage": 0.3, "obscurite": 0.45 },
+        "profondeurDeChamp": { "distanceMiseAuPoint": 12, "flou": 1.5 },
+        "aberration": 0
+      },
+      "interface": { "texte": { "haut": "snow", "bas": "snow" }, "voileBas": 0.4, "contrasteMin": 5.1 }
+    },
+    "nuit-tombee": {
+      "nom": "Nuit tombée",
+      "intention": "la plus sombre : brume basse, neige grise, fenêtre ambre intense, contraste fort",
+      "ciel": { "haut": "#17181A", "horizon": "#3F4348" },
+      "brouillard": { "couleur": "#2F3236", "densite": 0.012, "visibilite95": 144.2 },
+      "bandesBrume": [
+        { "hauteur": 0.78, "epaisseur": 0.1, "opacite": 0.5 },
+        { "hauteur": 0.86, "epaisseur": 0.06, "opacite": 0.4 }
+      ],
+      "neige": { "albedo": "#6F7377" },
+      "roche": { "albedo": "#27292C" },
+      "bois": { "albedo": "#57534E" },
+      "lumieres": {
+        "ambiante": { "couleur": "#FFFFFF", "intensite": 0.6 },
+        "hemisphere": { "ciel": "#4A4F55", "sol": "#3A3D41", "intensite": 0.4 },
+        "directionnelle": { "couleur": "#C8CBCE", "intensite": 0.35, "role": "clair de lune très faible" },
+        "interieure": { "couleur": "#F2A33A", "intensite": 200, "unite": "candela" }
+      },
+      "fenetre": { "emissif": "#F2A33A", "intensiteEmissive": 5, "lueurNits": 12 },
+      "exposition": 0.85,
+      "toneMapping": "AgX",
+      "post": {
+        "bloom": { "intensite": 1.2, "seuil": 0.9, "rayon": 0.65 },
+        "grain": 0.04,
+        "vignette": { "decalage": 0.3, "obscurite": 0.55 },
+        "profondeurDeChamp": { "distanceMiseAuPoint": 12, "flou": 1.5 },
+        "aberration": 0
+      },
+      "interface": { "texte": { "haut": "snow", "bas": "snow" }, "voileBas": 0, "contrasteMin": 8.7 }
+    }
+  },
+  "choisi": {
+    "origine": {
+      "base": "nuit-tombee",
+      "emprunts": {}
+    },
+    "valide": {
+      "par": "Kerem",
+      "le": "2026-11-08"
+    },
+    "progression": {
+      "etapes": [
+        "jour",
+        "heure-bleue",
+        "nuit-tombee"
+      ],
+      "note": "pendant l'entrée, la nuit tombe : l'heure bleue sert d'étape intermédiaire entre le jour et la nuit tombée (phases 03 et 05) ; les valeurs s'interpolent d'un état à l'autre"
+    },
+    "valeurs": {
+      "nom": "Nuit tombée",
+      "intention": "la plus sombre : brume basse, neige grise, fenêtre ambre intense, contraste fort",
+      "ciel": {
+        "haut": "#17181A",
+        "horizon": "#3F4348"
+      },
+      "brouillard": {
+        "couleur": "#2F3236",
+        "densite": 0.012,
+        "visibilite95": 144.2
+      },
+      "bandesBrume": [
+        {
+          "hauteur": 0.78,
+          "epaisseur": 0.1,
+          "opacite": 0.5
+        },
+        {
+          "hauteur": 0.86,
+          "epaisseur": 0.06,
+          "opacite": 0.4
+        }
+      ],
+      "neige": {
+        "albedo": "#6F7377"
+      },
+      "roche": {
+        "albedo": "#27292C"
+      },
+      "bois": {
+        "albedo": "#57534E"
+      },
+      "lumieres": {
+        "ambiante": {
+          "couleur": "#FFFFFF",
+          "intensite": 0.6
+        },
+        "hemisphere": {
+          "ciel": "#4A4F55",
+          "sol": "#3A3D41",
+          "intensite": 0.4
+        },
+        "directionnelle": {
+          "couleur": "#C8CBCE",
+          "intensite": 0.35,
+          "role": "clair de lune très faible"
+        },
+        "interieure": {
+          "couleur": "#F2A33A",
+          "intensite": 200,
+          "unite": "candela"
+        }
+      },
+      "fenetre": {
+        "emissif": "#F2A33A",
+        "intensiteEmissive": 5,
+        "lueurNits": 12
+      },
+      "exposition": 0.85,
+      "toneMapping": "AgX",
+      "post": {
+        "bloom": {
+          "intensite": 1.2,
+          "seuil": 0.9,
+          "rayon": 0.65
+        },
+        "grain": 0.04,
+        "vignette": {
+          "decalage": 0.3,
+          "obscurite": 0.55
+        },
+        "profondeurDeChamp": {
+          "distanceMiseAuPoint": 12,
+          "flou": 1.5
+        },
+        "aberration": 0
+      },
+      "interface": {
+        "texte": {
+          "haut": "snow",
+          "bas": "snow"
+        },
+        "voileBas": 0,
+        "contrasteMin": 8.7
+      }
+    }
+  }
+}

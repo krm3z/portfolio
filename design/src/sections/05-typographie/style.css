@@ -1,0 +1,28 @@
+/* ----- 05 · Typographie ----- */
+.specimens { display: grid; gap: var(--space-64); }
+.specimen { display: grid; gap: var(--space-16); padding-bottom: var(--space-48); border-bottom: var(--trait) solid var(--color-border); }
+.specimen__role { color: var(--color-text-muted); }
+.specimen__nom { margin-left: -0.04em; }
+.specimen__pitch { max-width: 18ch; }
+.specimen--deux { gap: var(--space-48); }
+@media (min-width: 1024px) {
+  .specimen--deux { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: var(--gouttiere); align-items: start; }
+}
+.specimen--deux > div { display: grid; gap: var(--space-16); }
+.specimen__etiquettes { display: flex; flex-wrap: wrap; gap: var(--space-12) var(--space-32); }
+.etiquette--claire { color: var(--color-text); }
+
+.polices { display: grid; gap: var(--gouttiere); }
+@media (min-width: 768px) { .polices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.police { display: grid; gap: var(--space-8); align-content: start; padding: var(--space-32); background: var(--color-surface); border-radius: var(--radius-tuile); }
+.police__apercu { font-size: clamp(72px, 8vw, 120px); line-height: 1; letter-spacing: var(--ls-display); margin-bottom: var(--space-16); font-weight: var(--fw-moyen); }
+.police--mono .police__apercu, .police--mono .police__graisses { font-family: var(--font-mono); letter-spacing: 0; }
+.police__graisses { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-24); margin-block: var(--space-12); font-size: var(--fs-texte); }
+.police__licence { border-top: var(--trait) solid var(--color-border); padding-top: var(--space-16); margin-top: var(--space-8); }
+
+.tableau--echelle { min-width: 720px; }
+
+.chiffres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-32) var(--gouttiere); }
+@media (min-width: 1024px) { .chiffres { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.chiffres li { display: grid; gap: var(--space-8); }
+.chiffres__valeur { font-size: clamp(32px, 3.6vw, 56px); line-height: 1; font-weight: var(--fw-texte); letter-spacing: -0.02em; white-space: nowrap; }

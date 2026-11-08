@@ -1,0 +1,11 @@
+/* ----- 12 · Storyboard ----- */
+.planches { display: grid; gap: var(--space-48) var(--gouttiere); }
+@media (min-width: 640px) { .planches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .planches { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.planche figure { display: grid; gap: var(--space-12); }
+.planche .k-vignette { box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.planche__num { font-size: var(--fs-petit); color: var(--color-text-muted); }
+.planche figcaption { display: grid; gap: var(--space-4); }
+.planche__chapitre { font-weight: var(--fw-moyen); }
+.planche__chapitre .etiquette { margin-right: var(--space-4); }
+.planche__plage { color: var(--color-text); }

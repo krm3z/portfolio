@@ -1,0 +1,99 @@
+/* ===== Kit de dessin : styles des vignettes SVG (sections 02, 03, 09, 12) =====
+   Monochrome + ambre : l'ambre ne sert qu'aux sources de lumière (vitre, écran, halo). */
+.k-vignette { display: block; width: 100%; height: auto; border-radius: var(--radius-sm); }
+.k-vignette line, .k-vignette polyline, .k-vignette path, .k-vignette rect, .k-vignette circle, .k-vignette polygon { vector-effect: non-scaling-stroke; }
+.k-fond { fill: var(--night-2); }
+.k-fond-clair { fill: var(--snow); }
+.k-fond-brume { fill: var(--jour-brume); } /* état « jour » : brume presque blanche, lue dans ambiance.json */
+.k-trait { fill: none; stroke: var(--snow); stroke-opacity: 0.55; stroke-width: 1; }
+.k-trait-fin { fill: none; stroke: var(--snow); stroke-opacity: 0.22; stroke-width: 1; }
+.k-trait-ambre { fill: none; stroke: var(--amber); stroke-width: 1.5; }
+.k-point { fill: var(--snow); }
+.k-nuage .k-liens line { stroke: var(--snow); stroke-opacity: 0.22; stroke-width: 1; }
+.k-filaire line, .k-filaire rect { stroke: var(--snow); stroke-opacity: 0.85; stroke-width: 1; }
+.k-filaire .k-point { fill: var(--snow); }
+.k-sur-clair .k-nuage .k-liens line, .k-sur-clair .k-filaire line, .k-sur-clair .k-filaire rect { stroke: var(--night); stroke-opacity: 0.45; }
+.k-sur-clair .k-point { fill: var(--snow); filter: drop-shadow(0 0 1.5px rgb(14 15 17 / 0.35)); }
+.k-toit, .k-cheminee { fill: var(--night-3); stroke: var(--snow); stroke-opacity: 0.4; stroke-width: 1; }
+.k-vitre { fill: var(--night); stroke: var(--snow); stroke-opacity: 0.3; stroke-width: 1; }
+.k-vitre-allumee { fill: url(#k-degrade-vitre); }
+.k-montant { stroke: var(--night); stroke-width: 1.2; }
+.k-interieur { fill: var(--night); }
+.k-ecran-dos { fill: var(--night); }
+.k-neige { fill: var(--snow); fill-opacity: 0.92; }
+.k-sol { fill: var(--snow); fill-opacity: 0.12; }
+.k-sol-plein { fill: color-mix(in srgb, var(--night-3), var(--mist) 22%); }
+.k-cretes-1 { fill: color-mix(in srgb, var(--night-3), var(--mist) 12%); }
+.k-cretes-2 { fill: color-mix(in srgb, var(--night-3), var(--mist) 5%); }
+.k-cretes-3 { fill: color-mix(in srgb, var(--night-2), var(--night-3) 40%); }
+.k-brume { fill: var(--mist); }
+.k-flocon { fill: var(--snow); fill-opacity: 0.7; }
+.k-avatar { fill: var(--night-3); stroke: var(--snow); stroke-opacity: 0.45; stroke-width: 1; }
+.k-avatar--plein { fill: var(--mist); stroke: none; }
+.k-meuble { fill: var(--mist); fill-opacity: 0.55; }
+.k-ecran { fill: var(--amber); }
+.k-ecran-eteint { fill: var(--night-3); stroke: var(--snow); stroke-opacity: 0.35; stroke-width: 1; }
+.k-ecran-barre { fill: var(--night); fill-opacity: 0.55; }
+.k-halo { fill: url(#k-degrade-halo); }
+.k-micro { fill: var(--snow); fill-opacity: 0.55; }
+.k-sur-clair .k-micro { fill: var(--night); fill-opacity: 0.55; }
+.k-ligne { fill: var(--mist); fill-opacity: 0.4; }
+.k-ligne-claire { fill: var(--snow); fill-opacity: 0.85; }
+.k-ui { fill: none; stroke: var(--snow); stroke-opacity: 0.35; stroke-width: 1; }
+.k-ui-plein { fill: var(--night-3); }
+.k-texte { font-family: var(--font-mono); font-size: 7px; letter-spacing: 0.08em; fill: var(--mist); }
+.k-texte-geant { font-family: var(--font-sans); font-weight: 500; letter-spacing: -0.03em; fill: var(--snow); }
+.k-texte-geant--ambre { fill: var(--amber); }
+.k-sur-clair .k-texte-geant { fill: var(--night); }
+.k-bouton-ambre { fill: var(--amber); }
+.k-pilule { fill: var(--night); }
+.k-barre-donnee { fill: var(--gris-donnee); }
+.k-barre-donnee--ambre { fill: var(--amber); }
+.k-equerre { fill: none; stroke: var(--snow); stroke-opacity: 0.6; stroke-width: 1; }
+.k-croix { stroke: var(--mist); stroke-width: 1.5; }
+
+/* ----- Paysages d'ambiance (svg/paysage.mjs) : les couleurs calculées arrivent en variables --p-* ----- */
+.k-paysage { display: block; width: 100%; height: auto; }
+.k-paysage .k-filaire line, .k-paysage .k-filaire rect, .k-paysage .k-liens line { vector-effect: non-scaling-stroke; }
+.k-paysage .k-toit, .k-paysage .k-cheminee { fill: var(--p-toit); stroke: none; }
+.k-paysage .k-neige { fill: var(--p-neige); fill-opacity: 1; }
+.k-paysage .k-vitre { fill: var(--p-vitre); stroke: none; }
+.k-paysage .k-montant { stroke: var(--p-toit); stroke-width: 1.4; }
+.k-paysage .k-interieur, .k-paysage .k-ecran-dos { fill: var(--p-interieur); }
+.k-nuage--loin .k-liens line { stroke-opacity: 0.12; }
+.k-sur-clair .k-nuage--loin .k-liens line { stroke-opacity: 0.22; }
+.k-nuage--loin .k-point { r: 1px; }
+.k-nuage--proche .k-point { r: 3.2px; }
+.k-nuage--tres-proche .k-point { r: 5.5px; }
+.k-ui-logo { fill: var(--p-ui); font-family: var(--font-sans); font-weight: var(--fw-titre); letter-spacing: -0.02em; }
+.k-ui-texte { fill: var(--p-ui); font-family: var(--font-mono); font-weight: var(--fw-moyen); letter-spacing: 0.02em; }
+.k-ui-texte--maj { text-transform: uppercase; letter-spacing: 0.12em; }
+.k-ui-texte--bas { fill: var(--p-ui-bas, var(--p-ui)); }
+.k-ui-pilule { fill: var(--p-pilule); }
+.k-ui-pilule-texte { fill: var(--p-pilule-texte); font-family: var(--font-mono); font-weight: var(--fw-moyen); letter-spacing: 0.02em; }
+
+/* ----- Scènes du site (svg/scenes.mjs) ----- */
+.k-cretes-clair-1 { fill: color-mix(in srgb, var(--jour-brume), var(--night) 14%); }
+.k-cretes-clair-2 { fill: color-mix(in srgb, var(--jour-brume), var(--night) 8%); }
+.k-cretes-clair-3 { fill: color-mix(in srgb, var(--jour-brume), var(--night) 4%); }
+.k-ile { fill: var(--snow); }
+.k-montant--clair { stroke: var(--night-3); stroke-width: 3; }
+.k-socle { fill: none; stroke: var(--snow); stroke-opacity: 0.3; stroke-width: 1; }
+.k-socle--2 { stroke-opacity: 0.14; }
+.k-sur-clair .k-texte { fill: var(--night); fill-opacity: 0.65; }
+.k-texte--sombre, .k-sur-clair .k-texte--sombre { fill: var(--night); fill-opacity: 1; }
+.k-texte--clair, .k-sur-clair .k-texte--clair { fill: var(--snow); fill-opacity: 1; }
+.k-texte--espace { letter-spacing: 0.3em; }
+.k-egaliseur rect { fill: var(--night); }
+.k-pointilles { fill: none; stroke: var(--snow); stroke-opacity: 0.45; stroke-dasharray: 3 3; }
+.k-point-lumineux { filter: drop-shadow(0 0 4px var(--amber)); }
+.k-texte-geant--attenue { fill-opacity: 0.4; }
+.k-filtre-actif { fill: var(--amber-soft); }
+.k-fleche-tete { fill: none; stroke: var(--mist); stroke-width: 1.2; }
+.k-traces { stroke-dasharray: 2 4; }
+/* Sur l'état « jour », la cabane en fil de fer reste plus marquée que le treillis qui converge vers elle. */
+.k-paysage.k-sur-clair .k-filaire line, .k-paysage.k-sur-clair .k-filaire rect { stroke-opacity: 0.85; stroke-width: 1.4; }
+.k-sur-clair .k-treillis .k-point { fill: var(--night); filter: none; }
+.k-sur-clair .k-treillis .k-liens line { stroke-opacity: 0.55; }
+.k-sur-clair .k-nuage--loin .k-point { fill: var(--night); fill-opacity: 0.35; filter: none; }
+.k-sur-clair .k-nuage--proche .k-point, .k-sur-clair .k-nuage--tres-proche .k-point { fill: var(--night); fill-opacity: 0.45; filter: none; }

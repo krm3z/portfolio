@@ -9,11 +9,12 @@
     "monogramme": "KU",
     "accueil": "Home",
     "apropos": "About",
+    "competences": "Skills",
     "projets": "Work",
     "contact": "Contact",
     "ouvrirMenu": "Open menu",
     "fermerMenu": "Close menu",
-    "changerLangue": "Français",
+    "changerLangue": "FR / EN",
     "changerLangueLabel": "View the site in French"
   },
   "chapitres": {
@@ -30,6 +31,10 @@
   "son": {
     "activer": "Turn sound on",
     "couper": "Turn sound off"
+  },
+  "boucles": {
+    "pause": "Pause animations",
+    "reprendre": "Resume animations"
   },
   "loader": {
     "texteDefilant": "DATA ANALYST • KEREM UYSAL • AI & DATA •",
@@ -56,6 +61,7 @@
   "competences": {
     "titre": "What I do",
     "voirLesPreuves": "See the projects that prove it",
+    "prouveDans": "Proven in",
     "ouvrir": "Open",
     "fermer": "Close",
     "preuveMakingOf": "This site (making-of)",
@@ -98,12 +104,12 @@
       "tous": "All",
       "reinitialiser": "Reset filters",
       "aucunResultat": "No project matches these filters.",
-      "resultats": "{n} project(s)"
+      "resultats": "{n, plural, one {# project} other {# projects}}"
     }
   },
   "pageProjet": {
     "question": "The question",
-    "contexte": "Background",
+    "contexte": "Context",
     "maPart": "My part",
     "demarche": "Approach",
     "resultats": "Results",
@@ -129,8 +135,9 @@
     "reseaux": "Social",
     "copierEmail": "Copy email",
     "emailCopie": "Email copied",
+    "copieImpossible": "Couldn't copy: the address is selected",
     "telechargerCv": "Download my CV",
-    "credit": "Designed and developed by Kerem Uysal ©"
+    "credit": "Designed by Kerem Uysal, coded by AI agents under Kerem's direction © 2026"
   },
   "makingOf": {
     "titre": "Making-of",

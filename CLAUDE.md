@@ -7,13 +7,14 @@ Les sections B à G ci-dessous sont recopiées intégralement depuis `prompts/00
 
 1. [Phases et statuts](#phases-et-statuts)
 2. [Décisions validées en phase 00](#décisions-validées-en-phase-00)
-3. [Repères du dépôt](#repères-du-dépôt)
-4. [B. Le projet](#b-le-projet)
-5. [C. Les deux références, décrites plan par plan](#c-les-deux-références-décrites-plan-par-plan)
-6. [D. Direction artistique (obligatoire)](#d-direction-artistique-obligatoire)
-7. [E. Plan du site et chapitres (ordre réel d'affichage)](#e-plan-du-site-et-chapitres-ordre-réel-daffichage)
-8. [F. Contenu (source unique)](#f-contenu-source-unique)
-9. [G. Technique, conventions, budgets, skills et règles de travail](#g-technique-conventions-budgets-skills-et-règles-de-travail)
+3. [Décisions validées en phase 01](#décisions-validées-en-phase-01)
+4. [Repères du dépôt](#repères-du-dépôt)
+5. [B. Le projet](#b-le-projet)
+6. [C. Les deux références, décrites plan par plan](#c-les-deux-références-décrites-plan-par-plan)
+7. [D. Direction artistique (obligatoire)](#d-direction-artistique-obligatoire)
+8. [E. Plan du site et chapitres (ordre réel d'affichage)](#e-plan-du-site-et-chapitres-ordre-réel-daffichage)
+9. [F. Contenu (source unique)](#f-contenu-source-unique)
+10. [G. Technique, conventions, budgets, skills et règles de travail](#g-technique-conventions-budgets-skills-et-règles-de-travail)
 
 ## Phases et statuts
 
@@ -22,7 +23,7 @@ Statuts possibles : à faire · en cours · validée. Mis à jour à la fin de c
 | Phase | Intitulé | Statut | Prompt |
 |---|---|---|---|
 | 00 | Mise en place du projet | validée (07/11/2026) | prompts/00-mise-en-place.md · prompts/00-reponses-validation.md |
-| 01 | Direction artistique | à faire | prompts/01-direction-artistique.md |
+| 01 | Direction artistique | validée (08/11/2026) | prompts/01-direction-artistique.md · prompts/01-reponses-plan.md · prompts/01-reponses-validation.md |
 | 02 | Avatar | à faire | |
 | 03 | Scènes 3D Blender | à faire | |
 | 04 | Base du site et loader | à faire | |
@@ -45,12 +46,29 @@ Statuts possibles : à faire · en cours · validée. Mis à jour à la fin de c
 - HiraStream : le dépôt n'est pas encore public. Réserve maintenue : pas de lien tant qu'il est privé.
 - Règles ECC conservées : common, typescript, react, web, python. Les autres langages ont été retirés.
 
+## Décisions validées en phase 01
+
+- Ambiance retenue : 3 · Nuit tombée, sans emprunt (`design/ambiance.json` → `choisi`). Pendant l'entrée, la nuit tombe : jour → heure bleue (étape intermédiaire) → nuit tombée ; les valeurs s'interpolent d'un état à l'autre (phases 03 et 05). Les trois candidates restent en archive dans `ambiance.json`.
+- Cabane : A-frame moderne, grande façade triangulaire vitrée côté bureau (on y voit l'avatar assis), petite cheminée, toit à forte pente qui retient la neige.
+- État « jour » : des points ordonnés convergent vers la silhouette de l'A-frame (coquilles en forme d'A et rayons vers la cabane), compacts ; la cabane reste lisible.
+- Micro-texte posé sur la 3D : Geist Mono 500, 12 px, une couleur par zone (haut sur le ciel, bas sur la neige). Nuit tombée : snow partout. Au passage par l'heure bleue : un voile bas de 0,4 sous « Faites défiler ». Le contraste se mesure deux fois : couleur prévue (méthode WCAG) et pixels réellement dessinés (`scripts/da-ambiances.mjs`).
+- Focus : anneau ambre de 2 px décalé de 3 px ; sur fond clair seulement, liseré night de 1 px autour. Un cadre qui défile porte son anneau sur son parent.
+- Boucles : bouton pause à côté du son ; avec `prefers-reduced-motion`, elles sont arrêtées dès le départ (le visiteur peut les relancer lui-même).
+- Grille mobile : 4 colonnes à 390 px (12 dès 768 px).
+- Gardés tels que demandés dans le brief : soulignement de lien en 0,45 s, point « En cours » qui pulse toutes les 2 s.
+- Typographie française (apostrophe ’, espaces insécables avant « : ; ! ? » et entre un nombre et son unité) posée à l'affichage par une seule fonction testée ; les fichiers de `content/` gardent l'apostrophe droite.
+- Textes : les corrections de la section 13 sont appliquées dans `content/fr` et `content/en` (pluriel ICU, bouton « FR / EN », nouvelles clés, crédit honnête). En anglais, « Background » reste pour le parcours ; « Context » sert seulement au contexte d'un projet.
+- General Sans (licence ITF) : pas de fichier de police dans le dépôt ; chargement par Fontshare. Geist Mono : paquet `geist` (SIL OFL 1.1).
+- Le projet doit quitter OneDrive avant la phase 04.
+
 ## Repères du dépôt
 
 - `content/fr/` et `content/en/` : six fichiers JSON (identite, projets, parcours, competences, stack, ui). Seule source des textes du site. Même structure dans les deux langues.
 - `types/content.ts` : schéma TypeScript de ces fichiers. Les preuves (`Preuve`) relient compétences et outils aux slugs de projets, à `/making-of` ou à une ligne du parcours.
 - `prompts/` : chaque prompt de phase, mot pour mot.
 - `making-of/phase-XX/` : captures avant, intermédiaires, après. `making-of/notes.md` : une entrée par phase.
+- `design/` : sources de vérité de la DA (`tokens.css`, `motion.json`, `ambiance.json`) et la page de référence `direction-artistique.html`, assemblée depuis `design/src/` par `npm run da:build`.
+- `scripts/da-*.mjs` : assemblage et vérifications de la page DA (captures, ambre, focus, axe, ambiances, mouvement, archive). Tests : `npm test` (Vitest).
 - `references/photos/` : photos de Kerem. Ne jamais modifier. `references/stylise/` : planches stylisées déposées par Kerem (avatar, extérieur, intérieur, manteau). Ne jamais modifier.
 - `.claude/` : skills, agents, commandes, règles ECC copiés depuis github.com/krm3z/Lelon (282 skills, 71 agents, 98 commandes au 07/11/2026). Règles ECC : `.claude/rules/ecc/` garde common, python, react, typescript, web. Skills du compte : site-3d-immersif, mentor-data, dataviz, deep-research, etc.
 - Environnement : Windows 11, PowerShell. Node 26, npm 11, git 2.56, gh 2.103 connecté au compte krm3z.
@@ -119,6 +137,7 @@ Couleurs (variables CSS) :
   --amber-soft rgba(242,163,58,0.15)  fonds actifs
 Règle de l'ambre : réservé à la lumière (fenêtre, écran, lampe, feu), aux chiffres clés, aux boutons principaux et aux éléments actifs. Jamais plus d'environ 5 % de la surface d'un écran.
 Dans la 3D, les gris peuvent être très légèrement froids (saturation maximale 8 %) pour l'heure bleue. Les valeurs exactes seront fixées en phase 01 dans design/ambiance.json.
+Ambiance retenue en phase 01 (choix de Kerem, 08/11/2026) : 3 · Nuit tombée, sans emprunt ; l'heure bleue sert d'étape intermédiaire pendant la tombée de la nuit dans l'entrée (phases 03 et 05). Valeurs clés (design/ambiance.json → choisi) : ciel #17181A → #3F4348 · brouillard #2F3236, densité 0,012 (caché à 95 % à 144 m) · neige #6F7377, roche #27292C, bois #57534E · fenêtre émissive #F2A33A × 5, lueur 12 nits, lampe intérieure 200 cd · exposition 0,85, tone mapping AgX · bloom 1,2 (seuil 0,9) · grain 0,04 · vignettage 0,3 / 0,55 · micro-texte snow, 8,7:1 au plus faible.
 
 Typographie :
 - General Sans (Fontshare), graisses 400, 500 et 600 : titres et textes. Vérifie et note la licence.

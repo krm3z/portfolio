@@ -1,0 +1,15 @@
+/* ----- 03 · Références traduites ----- */
+.ecarts { display: grid; gap: var(--space-32) var(--gouttiere); }
+@media (min-width: 768px) { .ecarts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ecarts > div { display: grid; gap: var(--space-12); align-content: start; padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); }
+.ecarts ul { display: grid; gap: var(--space-8); }
+.ecarts li { font-size: var(--fs-petit); line-height: var(--lh-petit); }
+
+.references { display: grid; gap: var(--space-48) var(--gouttiere); }
+@media (min-width: 640px) { .references { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .references { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.reference figure { display: grid; gap: var(--space-12); }
+.reference .k-vignette { box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.reference figcaption { display: grid; gap: var(--space-8); }
+.reference figcaption .etiquette { margin-right: var(--space-4); }
+.reference__id { font-size: var(--fs-petit); color: var(--color-text); }

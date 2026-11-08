@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-kerem-uysal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portfolio de Kerem Uysal. Outils de la phase 01 : assemblage et contrôle de la page de direction artistique.",
+  "scripts": {
+    "test": "vitest run",
+    "da:vendor": "node scripts/da-vendor.mjs",
+    "da:build": "node scripts/da-build.mjs",
+    "da:serveur": "node scripts/da-serveur.mjs",
+    "da:captures": "node scripts/da-captures.mjs",
+    "da:ambre": "node scripts/da-ambre.mjs",
+    "da:focus": "node scripts/da-focus.mjs",
+    "da:ambiances": "node scripts/da-ambiances.mjs",
+    "da:mouvement": "node scripts/da-mouvement.mjs",
+    "da:axe": "node scripts/da-axe.mjs",
+    "da:zoom": "node scripts/da-zoom.mjs",
+    "da:archive": "node scripts/da-archive.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.65.0",
+    "pngjs": "7.0.0",
+    "vitest": "5.1.0"
+  }
+}

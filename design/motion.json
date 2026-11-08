@@ -1,0 +1,212 @@
+{
+  "version": "1.0.0",
+  "description": "Mouvement du portfolio de Kerem Uysal. Durées en millisecondes (Motion attend des secondes : diviser par 1000). Aucun rebond, aucun dépassement.",
+  "unites": { "duree": "ms", "distance": "px" },
+  "courbes": {
+    "outExpo": {
+      "css": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "motion": [0.16, 1, 0.3, 1],
+      "gsap": "expo.out",
+      "gsapExact": "CustomEase 0.16,1,0.3,1 (à vérifier en phase 04)",
+      "usage": "entrées, révélations, retours d'interaction : la courbe signature (environ 80 % des animations)"
+    },
+    "inOut": {
+      "css": "cubic-bezier(0.65, 0, 0.35, 1)",
+      "motion": [0.65, 0, 0.35, 1],
+      "gsap": "power2.inOut",
+      "usage": "déplacements à l'écran : accordéon, mots alternés, transitions"
+    },
+    "lineaire": {
+      "css": "linear",
+      "motion": "linear",
+      "gsap": "none",
+      "usage": "suivi du scroll (scrub) et défilement en boucle"
+    }
+  },
+  "durees": { "micro": 200, "interface": 450, "apparition": 900 },
+  "ecarts": { "mots": 35, "lignes": 90, "cartes": 70 },
+  "distances": { "montee": 16, "survolCarte": 4, "fleche": 4, "flouSection": 8 },
+  "regles": [
+    "Retour d'interaction (survol, appui) en 200 ms au plus.",
+    "Toute durée au-delà de 300 ms a une raison écrite.",
+    "Décalage total d'un groupe de mots ou de cartes : 500 ms au plus.",
+    "Sortie plus rapide que l'entrée, par le même chemin.",
+    "Survol animé seulement avec (hover: hover) and (pointer: fine).",
+    "Les boucles s'arrêtent avec le bouton pause, hors de l'écran, et dès le départ en mouvement réduit.",
+    "Une donnée qu'on lit ne bouge pas pour le style."
+  ],
+  "animations": {
+    "texteMotParMot": {
+      "demo": "a", "terme": "Stagger (word reveal)", "frequence": "rare", "but": "hiérarchie : on lit la phrase dans l'ordre",
+      "declencheur": { "visible": 0.2, "uneFois": true },
+      "proprietes": ["opacity", "transform"],
+      "de": { "opacity": 0, "y": 16 }, "vers": { "opacity": 1, "y": 0 },
+      "duree": 900, "courbe": "outExpo", "ecart": 35,
+      "raison": "plus de 300 ms : lecture lente voulue ; textes courts seulement, pour garder le décalage total sous 500 ms",
+      "reduit": { "proprietes": ["opacity"], "duree": 300, "ecart": 0 }
+    },
+    "titreMasque": {
+      "demo": "b", "terme": "Mask reveal", "frequence": "rare", "but": "faire entrer un titre sans le déplacer dans la page",
+      "declencheur": { "visible": 0.2, "uneFois": true },
+      "proprietes": ["transform"], "exception": "le mot est rogné par son parent (overflow: hidden)",
+      "de": { "y": "110%" }, "vers": { "y": "0%" },
+      "duree": 900, "courbe": "outExpo", "ecart": 35,
+      "raison": "plus de 300 ms : titre rare, lu une fois",
+      "reduit": { "proprietes": ["opacity"], "duree": 300, "ecart": 0 }
+    },
+    "compteur": {
+      "demo": "c", "terme": "Number ticker", "frequence": "rare", "but": "montrer qu'un chiffre clé vient des données",
+      "declencheur": { "visible": 0.5, "uneFois": true },
+      "de": 0, "vers": 11246, "format": "fr-FR, espace fine insécable, largeur réservée sur la valeur finale",
+      "duree": 1200, "courbe": "outExpo",
+      "raison": "plus de 300 ms : un chiffre unique par écran, l'œil suit le compte",
+      "reduit": { "duree": 0, "note": "valeur finale affichée tout de suite" }
+    },
+    "survolCarte": {
+      "demo": "d", "terme": "Hover lift", "frequence": "frequente", "but": "retour : la carte répond au pointeur",
+      "condition": "(hover: hover) and (pointer: fine)",
+      "pistes": [
+        { "propriete": "transform", "vers": "translateY(-4px)", "duree": 200 },
+        { "propriete": "border-color", "vers": "amber", "duree": 200 },
+        { "propriete": "opacity du calque en couleur", "vers": 1, "duree": 450 }
+      ],
+      "courbe": "outExpo",
+      "raison": "le visuel passe du gris à la couleur en 450 ms (demandé) ; le retour immédiat reste en 200 ms",
+      "reduit": { "transform": null, "border-color": 200, "opacity": 200 }
+    },
+    "accordeon": {
+      "demo": "e", "terme": "Accordion", "frequence": "occasionnelle", "but": "état : la carte s'ouvre sur ses preuves",
+      "proprietes": ["grid-template-rows", "opacity"], "exception": "grid-template-rows 0fr → 1fr : seule façon d'animer une hauteur inconnue sans mesurer",
+      "duree": 450, "courbe": "inOut", "contenu": { "proprietes": ["opacity"], "duree": 450, "courbe": "outExpo" },
+      "raison": "450 ms : le contenu change de taille, un mouvement trop court saute",
+      "reduit": { "duree": 0, "contenu": { "proprietes": ["opacity"], "duree": 200 } }
+    },
+    "transitionSection": {
+      "demo": "f", "terme": "Blur fade", "frequence": "rare", "but": "passer d'un chapitre à l'autre sans coupure",
+      "declencheur": { "visible": 0.2, "uneFois": true },
+      "proprietes": ["opacity", "filter"], "exception": "flou de 8 px à 0, sur un bloc moyen seulement",
+      "de": { "opacity": 0, "blur": 8 }, "vers": { "opacity": 1, "blur": 0 },
+      "duree": 900, "courbe": "outExpo",
+      "raison": "plus de 300 ms : changement de chapitre, rare",
+      "reduit": { "proprietes": ["opacity"], "duree": 300 }
+    },
+    "motsAlternes": {
+      "demo": "g", "terme": "Text rotate (vertical mask)", "frequence": "boucle", "but": "dire les métiers et outils sans prendre de place",
+      "proprietes": ["transform"], "exception": "rogné par un masque vertical",
+      "duree": 600, "cycle": 2800, "courbe": "inOut",
+      "sortie": { "vers": "translateY(-100%)", "duree": 600 }, "entree": { "de": "translateY(100%)", "duree": 600 },
+      "pause": "bouton pause, hors de l'écran, onglet caché",
+      "accessibilite": "liste complète en texte pour les lecteurs d'écran ; la partie animée leur est masquée",
+      "raison": "600 et 2 800 ms demandés ; le mot reste lisible 2,2 s",
+      "reduit": { "boucle": false, "note": "premier mot affiché (DATA ANALYST), boucle arrêtée dès le départ" }
+    },
+    "pointTimeline": {
+      "demo": "h", "terme": "Scroll-driven animation", "frequence": "scroll", "but": "continuité : le point avance avec la lecture",
+      "proprietes": ["transform"], "pilotage": "progression = défilement, sans courbe ni retard",
+      "lignes": { "proprietes": ["color"], "de": "mist", "vers": "snow", "duree": 200, "courbe": "outExpo", "declencheur": "le point passe la ligne", "raison": "les lignes restent lisibles avant le passage du point (mist, 6,5:1) : le passage les met en avant sans retarder la lecture" },
+      "reduit": { "note": "point fixe sur la ligne active ; toutes les lignes en snow ; aucun lien au scroll" }
+    },
+    "flecheBouton": {
+      "terme": "Hover nudge", "frequence": "frequente", "but": "retour : l'action pointe vers sa destination",
+      "condition": "(hover: hover) and (pointer: fine)",
+      "proprietes": ["transform"], "vers": "translateX(4px)", "duree": 200, "courbe": "outExpo",
+      "reduit": { "transform": null }
+    },
+    "pressionBouton": {
+      "terme": "Press feedback", "frequence": "frequente", "but": "retour : l'appui est pris en compte",
+      "proprietes": ["transform"], "vers": "scale(0.96)", "duree": 200, "courbe": "outExpo",
+      "reduit": { "transform": null }
+    },
+    "soulignementLien": {
+      "terme": "Underline draw", "frequence": "frequente", "but": "retour : le lien se désigne",
+      "condition": "(hover: hover) and (pointer: fine), et au focus clavier",
+      "proprietes": ["transform"], "de": "scaleX(0) depuis la gauche", "vers": "scaleX(1)",
+      "duree": 450, "courbe": "outExpo",
+      "sortie": { "vers": "scaleX(0) vers la droite", "duree": 200 },
+      "raison": "450 ms demandés ; le trait commence à bouger dès la première image (ease-out)",
+      "reduit": { "proprietes": ["opacity"], "duree": 200 }
+    },
+    "toast": {
+      "terme": "Toast", "frequence": "occasionnelle", "but": "confirmer la copie de l'email",
+      "proprietes": ["transform", "opacity"],
+      "entree": { "de": "translateY(100%)", "duree": 450, "courbe": "outExpo" },
+      "affichage": 2400,
+      "sortie": { "vers": "translateY(100%)", "duree": 200, "courbe": "outExpo" },
+      "accessibilite": "annonce aria-live polite, jamais seule source d'information",
+      "raison": "entrée en 450 ms : occasionnelle, elle accompagne l'œil vers le bas de l'écran ; sortie en 200 ms",
+      "reduit": { "proprietes": ["opacity"], "duree": 200 }
+    },
+    "iconeCopie": {
+      "terme": "Icon swap", "frequence": "occasionnelle", "but": "état : copié",
+      "proprietes": ["transform", "opacity", "filter"], "de": { "scale": 0.25, "opacity": 0, "blur": 4 }, "vers": { "scale": 1, "opacity": 1, "blur": 0 },
+      "duree": 200, "courbe": "outExpo", "retour": 2000,
+      "reduit": { "proprietes": ["opacity"], "duree": 200 }
+    },
+    "curseur": {
+      "terme": "Cursor follower", "frequence": "continue", "but": "atmosphère et désignation des liens",
+      "condition": "(hover: hover) and (pointer: fine), désactivé en mouvement réduit",
+      "suivi": { "lissage": 0.22, "note": "part de l'écart rattrapée à chaque image" },
+      "survolLien": { "de": "point de 10 px", "vers": "anneau de 36 px", "duree": 200, "courbe": "outExpo" },
+      "reduit": { "note": "curseur du système, aucun suiveur" }
+    },
+    "pulseStatut": {
+      "terme": "Pulse", "frequence": "boucle", "but": "signaler un projet en cours",
+      "proprietes": ["opacity", "transform"], "cycle": 2000, "courbe": "inOut",
+      "pause": "bouton pause, hors de l'écran",
+      "reduit": { "boucle": false, "note": "point ambre fixe ; le libellé « En cours » porte l'information" }
+    },
+    "egaliseurSon": {
+      "terme": "Equalizer", "frequence": "boucle", "but": "état : le son est actif",
+      "proprietes": ["transform"], "cycle": 900, "courbe": "inOut", "ecart": 120,
+      "pause": "son coupé, bouton pause, hors de l'écran",
+      "reduit": { "boucle": false, "note": "barres immobiles ; le libellé du bouton porte l'état" }
+    },
+    "defilementLoader": {
+      "terme": "Marquee", "frequence": "boucle", "but": "occuper le chargement avec le nom et le métier",
+      "proprietes": ["transform"], "vitesse": "60 px par seconde", "courbe": "lineaire",
+      "pause": "bouton pause, onglet caché",
+      "accessibilite": "texte complet lu une fois ; la bande animée est masquée aux lecteurs d'écran",
+      "reduit": { "boucle": false, "note": "texte fixe" }
+    },
+    "piluleChargement": {
+      "terme": "Progress pill", "frequence": "rare", "but": "dire où en est le chargement, puis ouvrir le site",
+      "progression": "pourcentage réel des fichiers chargés, chiffres de largeur fixe",
+      "bascule": { "de": "Chargement 100 %", "vers": "Entrer", "proprietes": ["opacity"], "duree": 450, "courbe": "outExpo" },
+      "reduit": { "bascule": { "duree": 0 } }
+    },
+    "barreFiltre": {
+      "terme": "Filter state", "frequence": "occasionnelle", "but": "état : le filtre est actif",
+      "proprietes": ["background-color", "color"], "duree": 200, "courbe": "outExpo",
+      "reduit": { "duree": 200 }
+    },
+    "ouvertureEntete": {
+      "terme": "Orchestrated intro", "frequence": "rare", "but": "le seul moment orchestré de la page : les points se relient en cabane, puis la fenêtre s'allume",
+      "sequence": [
+        { "etape": "points", "proprietes": ["opacity"], "duree": 450, "ecart": 8 },
+        { "etape": "traits", "proprietes": ["stroke-dashoffset"], "duree": 900, "courbe": "inOut" },
+        { "etape": "fenetre", "proprietes": ["opacity"], "duree": 450, "courbe": "outExpo" }
+      ],
+      "regle": "le texte de l'en-tête est lisible dès la première image ; l'illustration se joue à côté",
+      "reduit": { "note": "état final affiché tout de suite" }
+    },
+    "apparition": {
+      "terme": "Fade up", "frequence": "rare", "but": "entrée de base des titres et blocs clés du site",
+      "proprietes": ["opacity", "transform"], "de": { "opacity": 0, "y": 16 }, "vers": { "opacity": 1, "y": 0 },
+      "duree": 900, "courbe": "outExpo", "ecart": 90,
+      "regle": "réservé aux titres et blocs clés, jamais à chaque section",
+      "raison": "plus de 300 ms : durée « apparition » de la DA, pour des éléments rares qu'on découvre une fois",
+      "reduit": { "proprietes": ["opacity"], "duree": 300 }
+    }
+  },
+  "boucles": {
+    "liste": ["motsAlternes", "pulseStatut", "egaliseurSon", "defilementLoader", "neige de la scène"],
+    "boutonPause": "à côté du bouton son ; son état est retenu d'une visite à l'autre",
+    "reduit": "arrêtées dès le départ (choix validé en phase 01)"
+  },
+  "scroll": {
+    "moteur": "Lenis + GSAP ScrollTrigger (phase 04)",
+    "lenis": { "lerp": 0.08, "smoothWheel": true },
+    "scrollTrigger": { "scrub": 1, "debut": "top 82%" },
+    "reduit": "scroll natif, caméra non pilotée, intro remplacée par une image fixe, uniquement des fondus"
+  }
+}

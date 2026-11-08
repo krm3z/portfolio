@@ -48,3 +48,6 @@ npm-debug.log*
 
 # Réglages locaux de Claude Code
 .claude/settings.local.json
+
+# Cache local des outils de la phase 01
+.cache/

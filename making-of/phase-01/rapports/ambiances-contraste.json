@@ -1,0 +1,50 @@
+{
+  "jour": {
+    "haut": {
+      "couleur": "night",
+      "prevu": 13.28,
+      "rendu": 4.86
+    },
+    "bas": {
+      "couleur": "night",
+      "prevu": 16.84,
+      "rendu": 6.21
+    }
+  },
+  "brume-claire": {
+    "haut": {
+      "couleur": "night",
+      "prevu": 8.71,
+      "rendu": 3.05
+    },
+    "bas": {
+      "couleur": "night",
+      "prevu": 11.88,
+      "rendu": 5.14
+    }
+  },
+  "heure-bleue": {
+    "haut": {
+      "couleur": "snow",
+      "prevu": 7.41,
+      "rendu": 7.73
+    },
+    "bas": {
+      "couleur": "snow",
+      "prevu": 5.16,
+      "rendu": 5.46
+    }
+  },
+  "nuit-tombee": {
+    "haut": {
+      "couleur": "snow",
+      "prevu": 14.08,
+      "rendu": 13.67
+    },
+    "bas": {
+      "couleur": "snow",
+      "prevu": 8.6,
+      "rendu": 8.86
+    }
+  }
+}

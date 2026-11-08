@@ -1,0 +1,24 @@
+/* ----- 01 · En-tête ----- */
+.section--entete { padding-top: var(--space-64); }
+.entete { display: grid; gap: var(--space-48); align-items: center; }
+@media (min-width: 1024px) { .entete { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); } }
+.entete__texte { display: grid; gap: var(--space-24); }
+.entete__surtitre { color: var(--color-text-muted); }
+.entete__titre { display: grid; gap: var(--space-12); font-weight: var(--fw-moyen); }
+.entete__sous-titre { color: var(--color-text-muted); }
+.entete__phrase { max-width: 32ch; }
+.entete__philosophie, .entete__sources { display: grid; gap: var(--space-8); padding-top: var(--space-16); border-top: var(--trait) solid var(--color-border); max-width: 60ch; }
+.entete__nom { font-weight: var(--fw-moyen); }
+.entete__sources ul { display: grid; gap: var(--space-8); }
+.entete__sources li { display: grid; gap: 2px; }
+.entete__sources code { font-family: var(--font-mono); font-size: var(--fs-petit); }
+.entete__image { display: grid; gap: var(--space-12); }
+.ouverture { display: block; width: 100%; height: auto; }
+.ouverture line { stroke-dasharray: 1; }
+.ouverture--attente circle, .ouverture--attente .ouverture__lumiere { opacity: 0; }
+.ouverture--attente line { stroke-dashoffset: 1; }
+.ouverture .k-liens line { stroke: var(--snow); stroke-opacity: 0.22; stroke-width: 1; }
+.ouverture .k-filaire line, .ouverture .k-filaire rect { stroke: var(--snow); stroke-opacity: 0.85; stroke-width: 1; }
+.entete__legende { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-8) var(--space-16); }
+.entete__rejouer { display: inline-flex; align-items: center; gap: var(--space-8); }
+.insecable { white-space: nowrap; }

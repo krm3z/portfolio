@@ -1,0 +1,55 @@
+/* ----- 04 · Palette ----- */
+.nuancier { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-24) var(--gouttiere); }
+@media (min-width: 768px) { .nuancier { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.nuance { display: grid; gap: var(--space-4); align-content: start; }
+.nuance__echantillon {
+  display: block; aspect-ratio: 4 / 3; margin-bottom: var(--space-12);
+  border-radius: var(--radius-sm); box-shadow: inset 0 0 0 var(--trait) var(--line);
+}
+.nuance__nom { font-size: var(--fs-petit); color: var(--color-text); }
+.nuance__valeur, .nuance__vue { font-size: var(--fs-etiquette); color: var(--color-text-muted); }
+.nuance__role { font-size: var(--fs-petit); color: var(--color-text-muted); }
+
+/* Tableaux de la page */
+.tableau-defilant { overflow-x: auto; }
+
+.tableau { width: 100%; border-collapse: collapse; font-size: var(--fs-petit); min-width: 560px; }
+.tableau th, .tableau td { text-align: left; padding: var(--space-12) var(--space-16) var(--space-12) 0; border-bottom: var(--trait) solid var(--color-border); vertical-align: middle; font-weight: var(--fw-texte); }
+.tableau thead th { font-family: var(--font-mono); font-size: var(--fs-etiquette-sm); letter-spacing: var(--ls-etiquette); text-transform: uppercase; color: var(--color-text-muted); }
+.tableau tbody th { color: var(--color-text); }
+.contraste__apercu { display: block; width: 44px; height: 32px; border-radius: var(--radius-sm); box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.contraste__apercu text { font-family: var(--font-sans); font-size: 15px; font-weight: var(--fw-moyen); }
+.badge {
+  display: inline-block; padding: 2px var(--space-8); border-radius: var(--radius-sm);
+  border: var(--trait) solid var(--line-fort);
+  font-family: var(--font-mono); font-size: var(--fs-etiquette-sm); letter-spacing: var(--ls-etiquette); text-transform: uppercase; white-space: nowrap;
+}
+.badge--echec { border-style: dashed; color: var(--color-text-muted); }
+
+/* Sur téléphone, le tableau des contrastes devient une liste : aperçu, paire, rapport, niveau, usage. */
+@media (max-width: 767px) {
+  .tableau--cartes { min-width: 0; }
+  .tableau--cartes thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .tableau--cartes tr { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--space-4) var(--space-12); align-items: center; padding-block: var(--space-12); border-bottom: var(--trait) solid var(--color-border); }
+  .tableau--cartes th, .tableau--cartes td { padding: 0; border: 0; }
+  .tableau--cartes td:first-child { grid-row: 1 / span 3; align-self: start; }
+  .tableau--cartes td:nth-child(4) { grid-column: 2; }
+  .tableau--cartes td:nth-child(5) { grid-column: 2 / -1; font-size: var(--fs-etiquette); }
+  .tableau--cartes td:nth-child(5):empty { display: none; }
+}
+
+/* Barre de proportions */
+.proportions__barre { position: relative; display: flex; height: 56px; border-radius: var(--radius-sm); overflow: visible; box-shadow: inset 0 0 0 var(--trait) var(--line); }
+.proportions__segment { display: block; height: 100%; box-shadow: inset 0 0 0 var(--trait) var(--line-fort); }
+.proportions__segment:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.proportions__segment:last-of-type { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.proportions__plafond { position: absolute; top: -10px; bottom: -10px; width: 0; border-left: var(--trait) dashed var(--snow); }
+.proportions__plafond .etiquette { position: absolute; top: calc(100% + 6px); right: 0; white-space: nowrap; }
+.proportions__legende { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-24); margin-top: var(--space-48); font-size: var(--fs-petit); color: var(--color-text-muted); }
+.proportions__legende .chiffre { color: var(--color-text); }
+
+/* Règle de l'ambre */
+.regle-ambre { display: grid; gap: var(--space-32); }
+@media (min-width: 768px) { .regle-ambre { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gouttiere); } }
+.liste-regles { display: grid; gap: var(--space-8); margin-top: var(--space-12); }
+.liste-regles li { padding-block: var(--space-8); border-bottom: var(--trait) solid var(--color-border); }

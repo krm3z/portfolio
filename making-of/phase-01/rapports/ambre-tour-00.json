@@ -1,0 +1,60 @@
+{
+  "tour": "00",
+  "objectif": "5 % maximum, hors section palette",
+  "formats": {
+    "390": {
+      "horsPalette": {
+        "ambre": 0,
+        "teinte": 0,
+        "somme": 0
+      },
+      "pireEcran": {
+        "pourcentage": 0,
+        "haut": 0,
+        "section": "en-tête"
+      },
+      "parSection": {
+        "entete": 0,
+        "principes": 0,
+        "references": 0,
+        "palette": 2.94,
+        "typographie": 0,
+        "grille": 0,
+        "composants": 0,
+        "dataviz": 0,
+        "matiere": 0,
+        "mouvement": 0,
+        "ambiances": 0,
+        "storyboard": 0,
+        "textes": 0
+      }
+    },
+    "1440": {
+      "horsPalette": {
+        "ambre": 0,
+        "teinte": 0.09,
+        "somme": 0.09
+      },
+      "pireEcran": {
+        "pourcentage": 0.43,
+        "haut": 0,
+        "section": "entete"
+      },
+      "parSection": {
+        "entete": 0.01,
+        "principes": 0.36,
+        "references": 0.8,
+        "palette": 2.59,
+        "typographie": 0,
+        "grille": 0,
+        "composants": 0,
+        "dataviz": 0,
+        "matiere": 0,
+        "mouvement": 0,
+        "ambiances": 0,
+        "storyboard": 0,
+        "textes": 0
+      }
+    }
+  }
+}

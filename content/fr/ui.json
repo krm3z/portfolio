@@ -9,11 +9,12 @@
     "monogramme": "KU",
     "accueil": "Accueil",
     "apropos": "À propos",
+    "competences": "Compétences",
     "projets": "Projets",
     "contact": "Contact",
     "ouvrirMenu": "Ouvrir le menu",
     "fermerMenu": "Fermer le menu",
-    "changerLangue": "English",
+    "changerLangue": "FR / EN",
     "changerLangueLabel": "Voir le site en anglais"
   },
   "chapitres": {
@@ -30,6 +31,10 @@
   "son": {
     "activer": "Activer le son",
     "couper": "Couper le son"
+  },
+  "boucles": {
+    "pause": "Mettre les animations en pause",
+    "reprendre": "Reprendre les animations"
   },
   "loader": {
     "texteDefilant": "DATA ANALYST • KEREM UYSAL • IA & DATA •",
@@ -56,6 +61,7 @@
   "competences": {
     "titre": "Ce que je sais faire",
     "voirLesPreuves": "Voir les projets qui le prouvent",
+    "prouveDans": "Prouvé dans",
     "ouvrir": "Ouvrir",
     "fermer": "Fermer",
     "preuveMakingOf": "Ce site (making-of)",
@@ -98,7 +104,7 @@
       "tous": "Tous",
       "reinitialiser": "Réinitialiser les filtres",
       "aucunResultat": "Aucun projet ne correspond à ces filtres.",
-      "resultats": "{n} projet(s)"
+      "resultats": "{n, plural, one {# projet} other {# projets}}"
     }
   },
   "pageProjet": {
@@ -129,8 +135,9 @@
     "reseaux": "Réseaux",
     "copierEmail": "Copier l'email",
     "emailCopie": "Email copié",
+    "copieImpossible": "Copie impossible : l'adresse est sélectionnée",
     "telechargerCv": "Télécharger mon CV",
-    "credit": "Conçu et développé par Kerem Uysal ©"
+    "credit": "Conçu par Kerem Uysal, codé par des agents IA sous sa direction © 2026"
   },
   "makingOf": {
     "titre": "Making-of",
